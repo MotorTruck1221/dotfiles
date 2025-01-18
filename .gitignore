@@ -1,9 +1,9 @@
-config/*
-!config/alacritty/*
-!config/eww/*
-!config/fastfetch/*
-!config/fish/*
-!config/river/*
-!config/thefuck/*
+config/
+!config/alacritty/
+!config/eww/
+!config/fastfetch/
+!config/fish/
+!config/river/
+!config/thefuck/
 !config/.gitconfig
 !config/starship.toml
