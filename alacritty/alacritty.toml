@@ -1,0 +1,5 @@
+[general]
+import = ["/home/motortruck1221/.config/alacritty/colorschemes/gruvbox/gruvbox.toml"]
+
+[env]
+TERM = "xterm-256color"

@@ -1,0 +1,7 @@
+[motortruck1221os-core-repo]
+SigLevel = Optional DatabaseOptional
+Server = https://gitlab.com/MotorTruck1221OS/$repo/-/raw/main/$arch
+
+[home_ungoogled_chromium_Arch]
+SigLevel = Required TrustAll
+Server = https://download.opensuse.org/repositories/home:/ungoogled_chromium/Arch/$arch

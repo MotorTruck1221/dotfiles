@@ -1,0 +1,17 @@
+colors:
+  #opacity: 0.9
+  primary:
+    background: "0x1e2326"
+    foreground: "0xd3c6aa"
+  cursor:
+    text: "0xd3c6aa"
+    cursor: "0x384b55"
+  line_indicator:
+    foreground: None
+    background: None
+  selection:
+    text: "0xd3c6aa"
+    background: "0x3c4841"
+
+window:
+  opacity: 0.75

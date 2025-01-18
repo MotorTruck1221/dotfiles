@@ -1,0 +1,8 @@
+#!/bin/fish
+
+riverctl map normal Super+Shift Return spawn alacritty
+riverctl map normal Super+Shift W spawn chromium
+riverctl map normal Super+Shift Q close
+riverctl default-layout rivertile
+rivertile -view-padding 6 -outer-padding 6 &
+swww-daemon &

@@ -1,0 +1,12 @@
+If you agree to change Xfce theme to EndeavourOS default, your previous theme
+will be saved into folder $HOME/.config/xfce4.20220704-01:26:32
+
+To restore the previous theme:
+     - remove folder $HOME/.config/xfce4
+     - rename $HOME/.config/xfce4.20220704-01:26:32 into $HOME/.config/xfce4
+
+(Note: this info is stored into file $HOME/.config/EOS-xfce-theme.log).
+
+Reboot is required for the theme change to take effect.
+
+Accept theme change and reboot now?

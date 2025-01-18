@@ -1,0 +1,148 @@
+@import "./colorschemes/gruvbox.css";
+* {
+	border: none;
+	border-radius: 10;
+    font-family: "JetbrainsMono Nerd Font" ;
+	font-size: 15px;
+	min-height: 10px;
+}
+
+window#waybar {
+	background: transparent;
+}
+
+window#waybar.hidden {
+	opacity: 0.2;
+}
+
+#window {
+	margin-top: 6px;
+	padding-left: 10px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+    color: transparent;
+	background: transparent;
+}
+
+#window,
+#pulseaudio,
+#network,
+#workspaces,
+#battery,
+#memory,
+#tray,
+#backlight,
+#custom-swaync {
+  background: transparent;
+  padding: 2px 10px;
+  margin: 2px 0 2px 0;
+  font-weight: 400;
+}
+
+tooltip {
+  background: @bg;
+  border-radius: 10px;
+  border-width: 2px;
+  border-style: solid;
+  border-color: @fg;
+}
+
+#workspaces {
+  margin-left: 10px;
+  padding-right: 0px;
+  padding-left: 5px;
+  margin-right: 10px;
+  font-weight: Bold;
+}
+
+#workspaces button {
+  padding: 5px;
+  color: @fg;
+}
+
+#workspaces button.active {
+  color: @fg-one;
+}
+
+#workspaces button.urgent {
+  color: @red;
+}
+
+#workspaces button:hover {
+  color: @yellow;
+  border-radius: 10rem;
+}
+
+#network {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @bg;
+	background: @fg-three;
+}
+
+#pulseaudio {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @bg;
+	background: @green;
+}
+
+#battery {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @fg;
+	background: @purple;
+}
+
+#backlight {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @bg;
+	background: @aqua;
+}
+
+#clock {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	padding-right: 10px;
+	margin-bottom: 0px;
+	border-radius: 10px;
+	transition: none;
+	color: @fg;
+	background: @gray;
+	/*background: #1A1826;*/
+}
+
+#tray {
+	margin-top: 6px;
+	margin-left: 8px;
+	padding-left: 10px;
+	margin-bottom: 0px;
+	padding-right: 10px;
+	border-radius: 10px;
+	transition: none;
+	color: @fg;
+	background: transparent;
+}

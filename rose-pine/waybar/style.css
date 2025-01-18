@@ -1,0 +1,160 @@
+@import "./rose.css";
+* {
+    border: 0;
+    border-radius: 0;
+    font-family: Cartograph CF Nerd Font, monospace;
+    font-weight: bold;
+    font-size: 14px;
+    min-height: 0;
+}
+
+window#waybar {
+    background: @base;
+    color: @text;
+}
+
+tooltip {
+    background: @base;
+    border-radius: 10px;
+    border-width: 2px;
+    border-style: solid;
+    border-color: @pine;
+}
+
+#workspaces button {
+    padding: 5px;
+    color: @highlight-high;
+    margin-right: 5px;
+}
+
+#workspaces button.active {
+    color: @rose;
+}
+
+#workspaces button.focused {
+    color: @rose;
+    background: @pine;
+    border-radius: 10px;
+}
+
+#workspaces button.urgent {
+    color: @love;
+    background: @foam;
+    border-radius: 10px;
+}
+
+#workspaces button:hover {
+    background: @highlight-high;
+    color: @text;
+    border-radius: 10px;
+}
+
+#custom-language,
+#custom-updates,
+#custom-caffeine,
+#custom-weather,
+#window,
+#clock,
+#battery,
+#pulseaudio,
+#network,
+#workspaces,
+#tray,
+#backlight,
+#cpu,
+#memory {
+    background: alpha(@base, 0);
+    padding: 0px 10px;
+    margin: 3px 0px;
+    margin-top: 2px;
+    /* border: 1px solid @sapphire; */
+}
+
+#tray {
+    border-radius: 10px;
+    margin-right: 5px;
+}
+
+#workspaces {
+    background: @base;
+    border-radius: 10px;
+    margin-left: 5px;
+    padding-right: 0px;
+    padding-left: 5px;
+}
+
+#backlight {
+    color: @pine;
+    border-radius: 10px 0px 0px 10px;
+    border-right: 0px;
+}
+
+#cpu {
+    /* border-radius: 10px 0px 0px 10px; */
+    border-right: 0px;
+    margin-left: 5px;
+}
+#memory {
+    border-right: 0px;
+    color: #f38ba8;
+    border-left: 0px;
+}
+
+#custom-language {
+    color: #f38ba8;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#custom-updates {
+    color: @foam;
+    border-radius: 10px 0px 0px 10px;
+    /* border-left: 0px; */
+    border-right: 0px;
+}
+
+#window {
+    border-radius: 10px;
+    margin-left: 60px;
+    margin-right: 60px;
+}
+
+#clock {
+    color: @text;
+    border-radius: 10px 10px 10px 10px;
+    margin-left: 5px;
+    /* border-right: 0px; */
+}
+
+#network {
+    color: #f9e2af;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio {
+    color: @rose;
+    border-left: 0px;
+    border-right: 0px;
+}
+
+#pulseaudio.microphone {
+    color: @love;
+    border-radius: 0px 10px 10px 0px;
+    border-left: 0px;
+    /* border-right: 0px; */
+    margin-right: 5px;
+}
+
+#battery {
+    color: @love;
+    border-radius: 0 10px 10px 0;
+    margin-right: 0px;
+    border-left: 0px;
+}
+
+#custom-weather {
+    /* border-radius: 0px 10px 10px 0px; */
+    border-right: 0px;
+    margin-left: 0px;
+}

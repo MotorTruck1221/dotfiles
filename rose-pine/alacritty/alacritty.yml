@@ -1,0 +1,4 @@
+import:
+  - ~/.config/alacritty/rose/color.yml
+env:
+  TERM: xterm-256color
