@@ -1,0 +1,37 @@
+#!/usr/bin/env fish
+
+# Keybinds
+riverctl map normal Super Return spawn alacritty
+riverctl map normal Super Q close
+riverctl map normal Super W spawn chromium
+
+# Auto start software
+riverctl spawn 'swww-daemon --format xrgb'
+riverctl spawn 'eww damon --force-wayland'
+
+# General WM rules
+riverctl map-pointer normal Super BTN_LEFT move-view
+riverctl map-pointer normal Super+Shift BTN_LEFT resize-view
+riverctl map normal Super+Shift Space toggle-float
+riverctl map normal Super F fullscreen
+
+# Rules
+riverctl rule-add ssd
+
+# Tiling
+riverctl default-layout wideriver
+echo "Starting wideriver"
+wideriver \
+	--layout left \
+	--layout-alt monocle \
+	--stack dwindle \
+	--count-master 1 \
+	--ratio-master 0.50 \
+	--count-wide-left 0 \
+	--ratio-wide 0.35 \
+	--no-smart-gaps \
+	--inner-gaps 2 \
+	--outer-gaps 4 \
+	--border-width 2 \
+	--log-threshold info \
+	> "/tmp/wideriver.{$XDG_VTNR}.{$USER}.log" 2>&1 &

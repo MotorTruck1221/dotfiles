@@ -1,0 +1,5 @@
+[general]
+import = ["colors/gruvbox.toml"]
+
+[env]
+TERM = "xterm-256color"

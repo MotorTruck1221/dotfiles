@@ -1,0 +1,13 @@
+[user]
+name = MotorTruck1221
+email = motortruck1221@protonmail.com
+username = motortruck1221
+
+[init]
+defaultBranch = main
+
+[core]
+editor = nvim
+
+[commit]
+gpgsign = true
