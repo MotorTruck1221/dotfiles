@@ -17,5 +17,6 @@
 	waybar # For the actual bar, may be replaced with eww at some point
 	agenix.packages.${system}.default
 	discord
+	btop
     ];
 }

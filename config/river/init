@@ -1,9 +1,5 @@
 #!/usr/bin/env fish
 
-set bemenuOpts {
-	fb: #282828
-}
-
 # Keybinds
 riverctl map normal Super Return spawn alacritty
 riverctl map normal Super Q close
@@ -19,6 +15,21 @@ riverctl map-pointer normal Super BTN_LEFT move-view
 riverctl map-pointer normal Super+Shift BTN_LEFT resize-view
 riverctl map normal Super Space toggle-float
 riverctl map normal Super F toggle-fullscreen
+
+# Wideriver rules
+riverctl map normal Super plus send-layout-cmd wideriver "--ratio +0.025"
+riverctl map normal Super equal send-layout-cmd wideriver "--ratio 0.50"
+riverctl map normal Super minus send-layout-cmd wideriver "--ratio -0.025"
+riverctl map normal Super+Alt plus send-layout-cmd wideriver "--count +1"
+riverctl map normal Super+Alt equal send-layout-cmd wideriver "--count 1"
+riverctl map normal Super+Alt minus send-layout-cmd wideriver "--count -1"
+
+# Tags
+for i in $(seq 1 9)
+    set tags (math "2 ^ ($i - 1)")
+    riverctl map normal Super $i set-focused-tags $tags
+    riverctl map normal Super+Shift $i set-view-tags $tags
+end
 
 # Rules
 riverctl rule-add ssd
