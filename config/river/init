@@ -9,6 +9,7 @@ riverctl map normal Super D spawn 'bemenu-run -i --fb "#282828" --ff "#ebdbb2" -
 # Auto start software
 riverctl spawn 'swww-daemon --format xrgb'
 riverctl spawn 'eww daemon --force-wayland'
+riverctl spawn 'waybar'
 
 # General WM rules
 riverctl map-pointer normal Super BTN_LEFT move-view
@@ -34,6 +35,11 @@ end
 # Rules
 riverctl rule-add ssd
 
+#XDG
+systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
+dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
+systemctl --user restart xdg-desktop-portal
+
 # Tiling
 riverctl default-layout wideriver
 echo "Starting wideriver"
@@ -49,5 +55,7 @@ wideriver \
 	--inner-gaps 2 \
 	--outer-gaps 4 \
 	--border-width 2 \
+	--border-color-focused "0x282828" \
+	--border-color-unfocused "0xebdbb2" \
 	--log-threshold info \
 	> "/tmp/wideriver.{$XDG_VTNR}.{$USER}.log" 2>&1 &
