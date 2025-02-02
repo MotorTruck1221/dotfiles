@@ -41,5 +41,14 @@
         zig
         rbenv
         gnumake
+        ruby.devEnv
+        sqlite
+        libpcap
+        postgresql
+        libxml2
+        libxslt
+        pkg-config
+        bundix
+        zlib
     ];
 }
