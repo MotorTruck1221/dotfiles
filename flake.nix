@@ -14,16 +14,15 @@
   	host = "voltex";
 	in {
       	    nixosConfigurations = {
-	        ${host} = nixpkgs.lib.nixosSystem {
+	            ${host} = nixpkgs.lib.nixosSystem {
            	    system = "x86_64-linux";
-	   	    specialArgs = {inherit inputs agenix host;};
-	   	    modules = [
-	   	        ./systems/${host}/configuration.nix
-			./systems/${host}/programs.nix
-			agenix.nixosModules.default
-	   	    ];
+	   	        specialArgs = {inherit inputs agenix host;};
+	   	        modules = [
+	   	            ./systems/${host}/configuration.nix
+			        ./systems/${host}/programs.nix
+			        agenix.nixosModules.default
+	   	        ];
       		};
-
   	    };
 	};
 }

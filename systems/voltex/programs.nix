@@ -45,10 +45,14 @@
         sqlite
         libpcap
         postgresql
+        postgresql.dev
+        postgresql.lib
         libxml2
         libxslt
         pkg-config
         bundix
         zlib
+        zlib.dev
+        openssl
     ];
 }
