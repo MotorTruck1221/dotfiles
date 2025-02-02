@@ -39,5 +39,6 @@
         gcc
         clang
         zig
+        rbenv
     ];
 }
