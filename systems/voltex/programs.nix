@@ -40,5 +40,6 @@
         clang
         zig
         rbenv
+        gnumake
     ];
 }
