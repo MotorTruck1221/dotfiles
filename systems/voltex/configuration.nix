@@ -58,6 +58,14 @@
   };
   programs.xfconf.enable = true;
   programs.appimage.binfmt = true;
+  programs.nix-ld = {
+      enable = true;
+      libraries = with pkgs; [
+        fuse
+        glib
+        dbus
+      ];
+  };
   services.openssh.enable = true;
   networking.nameservers = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
   services.resolved = {
@@ -68,6 +76,17 @@
       dnsovertls = "true";
   };
   services.tumbler.enable = true;
+  services.seatd.enable = true;
+  services.flatpak = {
+    enable = true;
+  };
+  systemd.services.flatpak-repo = {
+      wantedBy = [ "multi-user.target" ];
+      path = [ pkgs.flatpak ];
+      script = ''
+        flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
+      ''; 
+  };
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false;

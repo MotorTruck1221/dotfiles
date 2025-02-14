@@ -56,5 +56,6 @@
         openssl
         zellij
         ranger
+        dunst
     ];
 }
