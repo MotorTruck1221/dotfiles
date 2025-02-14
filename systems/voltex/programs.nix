@@ -54,5 +54,7 @@
         zlib
         zlib.dev
         openssl
+        zellij
+        ranger
     ];
 }

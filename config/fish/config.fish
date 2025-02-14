@@ -3,6 +3,7 @@ if status is-interactive
 end
 set fish_greeting ""
 alias vim="nvim"
+alias dev="zellij"
 
 status --is-interactive; and rbenv init - fish | source
 thefuck --alias | source

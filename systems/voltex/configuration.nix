@@ -50,6 +50,14 @@
   	enable = true;
 	xwayland.enable = true;
   };
+  programs.thunar = {
+      enable = true;
+      plugins = with pkgs.xfce; [
+        thunar-volman
+      ];
+  };
+  programs.xfconf.enable = true;
+  programs.appimage.binfmt = true;
   services.openssh.enable = true;
   networking.nameservers = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
   services.resolved = {
@@ -59,6 +67,7 @@
       fallbackDns = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
       dnsovertls = "true";
   };
+  services.tumbler.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false;
