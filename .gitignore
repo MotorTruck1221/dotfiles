@@ -9,3 +9,4 @@ config/*
 !config/starship.toml
 !config/dunst/
 !config/nvim/
+!config/zellij/
