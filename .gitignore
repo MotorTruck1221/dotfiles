@@ -7,3 +7,5 @@ config/*
 !config/thefuck/
 !config/.gitconfig
 !config/starship.toml
+!config/dunst/
+!config/nvim/

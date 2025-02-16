@@ -10,6 +10,7 @@ riverctl map normal Super D spawn 'bemenu-run -i --fb "#282828" --ff "#ebdbb2" -
 riverctl spawn 'swww-daemon --format xrgb'
 riverctl spawn 'eww daemon --force-wayland'
 riverctl spawn 'waybar'
+riverctl spawn 'dunst -startup_notification'
 
 # General WM rules
 riverctl map-pointer normal Super BTN_LEFT move-view
