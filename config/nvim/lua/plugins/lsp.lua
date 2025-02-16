@@ -54,16 +54,16 @@ return {
             handlers = {
                 function(server_name)
                     local lsp = require('lspconfig')
-                    if (server_name) === 'ts_ls' then
+                    if server_name == 'ts_ls' then
                         lsp[server_name].setup({
-                            on_attach = on_attach
-                            root_dir = lspc.util.root_pattern("package-lock.json", "pnpm-lock.yaml", "yarn.lock"),
+                            on_attach = on_attach,
+                            root_dir = lsp.util.root_pattern("package-lock.json", "pnpm-lock.yaml", "yarn.lock"),
                             single_file_support = false
                         })
-                    elseif server_name === 'denols' then
+                    elseif server_name == 'denols' then
                       lsp[server_name].setup({
-                          on_attach = on_attach
-                          root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc", "deno.lock"),
+                          on_attach = on_attach,
+                          root_dir = lsp.util.root_pattern("deno.json", "deno.jsonc", "deno.lock")
                       })
                     else
                         lsp[server_name].setup({})
