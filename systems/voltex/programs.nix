@@ -57,5 +57,6 @@
         zellij
         ranger
         dunst
+        hyprlock
     ];
 }

@@ -31,7 +31,7 @@
     description = "MotorTruck1221";
     shell = pkgs.fish;
     passwordFile = config.age.secrets.secret.path;
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "power" ];
+    extraGroups = [ "docker" "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
   nixpkgs.config.allowUnfree = true;
@@ -64,6 +64,7 @@
         fuse
         glib
         dbus
+        stdenv.cc.cc.lib
       ];
   };
   services.openssh.enable = true;
@@ -94,4 +95,5 @@
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
+  virtualisation.docker.enable = true;
 }
