@@ -58,5 +58,7 @@
         ranger
         dunst
         hyprlock
+        upx
+        dust
     ];
 }
