@@ -58,6 +58,10 @@
   };
   programs.xfconf.enable = true;
   programs.appimage.binfmt = true;
+  programs.kdeconnect = {
+      enable = true;
+      package = pkgs.kdePackages.kdeconnect-kde;
+  };
   programs.nix-ld = {
       enable = true;
       libraries = with pkgs; [
@@ -65,6 +69,8 @@
         glib
         dbus
         stdenv.cc.cc.lib
+        postgresql.dev
+        postgresql.lib
       ];
   };
   services.openssh.enable = true;
@@ -96,4 +102,5 @@
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
   virtualisation.docker.enable = true;
+  virtualisation.podman.enable = true;
 }

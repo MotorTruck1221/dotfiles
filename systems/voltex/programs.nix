@@ -60,5 +60,10 @@
         hyprlock
         upx
         dust
+        openresty
+        nginx
+        distrobox
+        luajit
+        krdc
     ];
 }

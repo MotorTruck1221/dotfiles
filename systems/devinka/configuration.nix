@@ -44,11 +44,6 @@
      enable = true;
      enableSSHSupport = true;
   };
-  programs.fish.enable = true;
-  programs.river = { 
-  	enable = true;
-	xwayland.enable = true;
-  };
   services.openssh.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
