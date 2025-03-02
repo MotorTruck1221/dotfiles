@@ -44,6 +44,7 @@
      enable = true;
      enableSSHSupport = true;
   };
+  programs.fish.enable = true;
   services.openssh.enable = true;
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
