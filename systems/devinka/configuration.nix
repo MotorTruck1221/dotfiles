@@ -60,7 +60,7 @@
   services.cloudflared = {
      enable = true;
      tunnels = {
-        "9da54db2-22f1-47d4-85e6-0c7c019f782c" = {
+        "27161a0f-216e-4cd4-a001-a80ac05769ea" = {
               credentialsFile = "${config.age.secrets.secret.path}";
               default = "http_status:500";
           };
