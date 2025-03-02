@@ -11,7 +11,7 @@
   };
 
   outputs = { self, nixpkgs, agenix, ... }@inputs: let
-  	host = "voltex";
+  	host = "devinka";
 	in {
       	    nixosConfigurations = {
 	            ${host} = nixpkgs.lib.nixosSystem {

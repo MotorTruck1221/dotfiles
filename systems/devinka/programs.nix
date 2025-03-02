@@ -6,6 +6,8 @@
 	    neovim
 	    starship
 	    fastfetch
+        thefuck
+        rbenv
 	    agenix.packages.${system}.default
     ];
 }
