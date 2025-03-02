@@ -8,6 +8,7 @@
 	    fastfetch
         thefuck
         rbenv
+        cloudflared
 	    agenix.packages.${system}.default
     ];
 }
