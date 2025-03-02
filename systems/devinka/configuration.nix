@@ -57,15 +57,15 @@
       fallbackDns = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
       dnsovertls = "true";
   };
-  #services.cloudflared = {
-  #    enable = true;
-  #    tunnels = {
-  #        "9da54db2-22f1-47d4-85e6-0c7c019f782c" = {
-  #            credentialsFile = "${config.age.secrets.secret.path}";
-  #            default = "http_status:500";
-  #        };
-  #    };
-  #};
+  services.cloudflared = {
+     enable = true;
+     tunnels = {
+        "9da54db2-22f1-47d4-85e6-0c7c019f782c" = {
+              credentialsFile = "${config.age.secrets.secret.path}";
+              default = "http_status:500";
+          };
+      };
+  };
   system.stateVersion = "24.11";
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
