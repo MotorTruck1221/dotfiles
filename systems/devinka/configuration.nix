@@ -1,7 +1,7 @@
 { config, pkgs, inputs, agenix, host, ... }:
 {
   imports = [
-  	./devinka.nix
+  	./${host}.nix
   ];
   #age.secrets.secret.file = ./secrets/secret.age;
   #age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
@@ -49,8 +49,17 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false;
+  networking.nameservers = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
+  services.resolved = {
+      enable = true;
+      dnssec = "true";
+      domains = [ "~." ];
+      fallbackDns = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
+      dnsovertls = "true";
+  };
   system.stateVersion = "24.11";
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
+  virtualisation.podman.enable = true;
 }
