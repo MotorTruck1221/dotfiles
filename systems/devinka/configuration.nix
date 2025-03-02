@@ -3,8 +3,8 @@
   imports = [
   	./${host}.nix
   ];
-  #age.secrets.secret.file = ./secrets/secret.age;
-  #age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
+  age.secrets.secret.file = ./secrets/secret.age;
+  age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "${host}";
@@ -30,7 +30,7 @@
     isNormalUser = true;
     description = "MotorTruck1221";
     shell = pkgs.fish;
-    #passwordFile = config.age.secrets.secret.path;
+    passwordFile = config.age.secrets.secret.path;
     extraGroups = [ "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
@@ -57,9 +57,18 @@
       fallbackDns = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
       dnsovertls = "true";
   };
+  services.cloudflared = {
+      enable = true;
+      tunnels = {
+          "9da54db2-22f1-47d4-85e6-0c7c019f782c" = {
+              credentialsFile = "${config.age.secrets.secret.path}";
+              default = "http_status:500";
+          };
+      };
+  };
   system.stateVersion = "24.11";
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
-  virtualisation.podman.enable = true;
+  virtualisation.docker.enable = true;
 }
