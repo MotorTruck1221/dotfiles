@@ -5,18 +5,37 @@ riverctl map normal Super Return spawn alacritty
 riverctl map normal Super Q close
 riverctl map normal Super W spawn chromium
 riverctl map normal Super D spawn 'bemenu-run -i --fb "#282828" --ff "#ebdbb2" --nb "#282828" --nf "#ebdbb2" --tb "#282828" --hb "#282828" --tf "#fb4934" --hf "#fabd2f" --nf "#ebdbb2" --af "#ebdbb2" --ab "#282828" -b --hp 20 -p "Application:"'
+riverctl map normal Super+Shift F spawn 'hyprshot -m region --clipboard-only'
+riverctl map normal Super PRINT spawn 'hyprshot -m window --clipboard-only'
+riverctl map normal None PRINT spawn 'hyprshot -m output'
 
 # Auto start software
 riverctl spawn 'swww-daemon --format xrgb'
 riverctl spawn 'eww daemon --force-wayland'
 riverctl spawn 'waybar'
 riverctl spawn 'dunst -startup_notification'
+riverctl spawn 'wl-paste --type text --watch cliphist store'
+riverctl spawn 'wl-paste --type image --watch cliphist store'
+riverctl spawn 'swayidle -w before-sleep "loginctl lock-session && pidof hyprlock || hyprlock"'
 
 # General WM rules
 riverctl map-pointer normal Super BTN_LEFT move-view
 riverctl map-pointer normal Super+Shift BTN_LEFT resize-view
 riverctl map normal Super Space toggle-float
 riverctl map normal Super F toggle-fullscreen
+riverctl focus-follows-cursor normal # I like this
+
+# Laptop rules, may have to be set to something different if needed.
+riverctl input pointer-2-14-ETPS/2_Elantech_Touchpad tap enabled # I like tap to click
+riverctl map normal None XF86MonBrightnessUp spawn 'brightnessctl set 1%+'
+riverctl map normal None XF86MonBrightnessDown spawn 'brightnessctl set 1%-'
+riverctl map normal None XF86AudioRaiseVolume spawn 'pamixer -i 1'
+riverctl map normal None XF86AudioLowerVolume spawn 'pamixer -d 1'
+riverctl map normal None XF86AudioMute spawn 'pamixer -t'
+riverctl map normal None XF86AudioPlay spawn 'playerctl play'
+riverctl map normal None XF86AudioStop spawn 'playerctl pause'
+riverctl map normal None XF86AudioNext spawn 'playerctl next'
+riverctl map normal None XF86AudioPrev spawn 'playerctl previous'
 
 # Wideriver rules
 riverctl map normal Super plus send-layout-cmd wideriver "--ratio +0.025"
@@ -35,6 +54,14 @@ end
 
 # Rules
 riverctl rule-add ssd
+riverctl rule-add -app-id 'file_progress*' float
+riverctl rule-add -app-id 'confirm*' float
+riverctl rule-add -app-id 'dialog*' float
+riverctl rule-add -app-id 'download*' float
+riverctl rule-add -app-id 'notification*' float
+riverctl rule-add -app-id 'error*' float
+riverctl rule-add -app-id 'splash*' float
+riverctl rule-add -app-id 'confirmreset*' float
 
 #XDG
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP

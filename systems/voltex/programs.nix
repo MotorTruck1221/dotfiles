@@ -65,5 +65,14 @@
         distrobox
         luajit
         krdc
+        hyprshot
+        wl-clipboard
+        libnotify
+        jq
+        grim
+        slurp
+        brightnessctl
+        playerctl
+        swayidle
     ];
 }
