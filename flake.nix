@@ -1,9 +1,9 @@
 {
-  description = "User NIX flake";
+  description = "NixOS Config";
 
   inputs = {
     nixpkgs = { 
-        url = "github:nixos/nixpkgs/nixos-24.11"; 
+        url = "github:nixos/nixpkgs/nixos-unstable"; 
     };
     agenix = { 
         url = "github:ryantm/agenix";

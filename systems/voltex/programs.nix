@@ -64,7 +64,8 @@
         nginx
         distrobox
         luajit
-        krdc
+        kdePackages.krdc
+        libsForQt5.krdc
         hyprshot
         wl-clipboard
         libnotify
