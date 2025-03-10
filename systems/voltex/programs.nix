@@ -1,6 +1,7 @@
 { config, pkgs, pkgs-stable, agenix, ... }: 
 {
-    environment.systemPackages = (with pkgs; [
+    environment.systemPackages = 
+    (with pkgs; [
     	git
 	    fish
 	    neovim
@@ -77,7 +78,9 @@
         watchman
         jdk
         android-studio
-    ]);
+    ])
+    
+    ++
 
     (with pkgs-stable; [
         ungoogled-chromium
