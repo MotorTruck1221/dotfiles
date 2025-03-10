@@ -75,5 +75,8 @@
         brightnessctl
         playerctl
         swayidle
+        watchman
+        jdk
+        android-studio
     ];
 }

@@ -31,7 +31,7 @@
     description = "MotorTruck1221";
     shell = pkgs.fish;
     passwordFile = config.age.secrets.secret.path;
-    extraGroups = [ "networkmanager" "wheel" "audio" "video" "power" ];
+    extraGroups = [ "keys" "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
   nixpkgs.config.allowUnfree = true;
