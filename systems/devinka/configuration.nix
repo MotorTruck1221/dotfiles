@@ -1,7 +1,7 @@
-{ config, pkgs, inputs, agenix, host, ... }:
+{ config, pkgs, inputs, agenix, ... }:
 {
   imports = [
-  	./${host}.nix
+  	./devinka.nix
   ];
   age.secrets.secret.file = ./secrets/secret.age;
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];

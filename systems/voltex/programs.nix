@@ -1,6 +1,6 @@
-{ config, pkgs, agenix, ... }: 
+{ config, pkgs, pkgs-stable, agenix, ... }: 
 {
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = (with pkgs; [
     	git
 	    fish
 	    neovim
@@ -13,7 +13,6 @@
 	    thefuck
 	    wideriver
 	    bemenu
-	    ungoogled-chromium
 	    waybar # For the actual bar, may be replaced with eww at some point
 	    agenix.packages.${system}.default
 	    discord
@@ -78,5 +77,9 @@
         watchman
         jdk
         android-studio
-    ];
+    ]);
+
+    (with pkgs-stable; [
+        ungoogled-chromium
+    ]);
 }
