@@ -5,6 +5,7 @@
   ];
   age.secrets.secret.file = ./secrets/secret.age;
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
+  age.secrets.secret.owner = "cloudflared";
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
   networking.hostName = "${host}";
@@ -30,8 +31,7 @@
     isNormalUser = true;
     description = "MotorTruck1221";
     shell = pkgs.fish;
-    passwordFile = config.age.secrets.secret.path;
-    extraGroups = [ "keys" "networkmanager" "wheel" "audio" "video" "power" ];
+    extraGroups = [ "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
   nixpkgs.config.allowUnfree = true;
