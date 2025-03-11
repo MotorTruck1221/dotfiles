@@ -27,6 +27,15 @@
 			            agenix.nixosModules.default
 	   	            ];
       		    };
+                "devinka" = nixpkgs.lib.nixosSystem {
+                    inherit system;
+                    specialArgs = {inherit inputs agenix pkgs-stable;};
+                    modules = [
+                        ./systems/devinka/configuration.nix
+                        ./systems/devinka/programs.nix
+                        agenix.nixosModules.defaul
+                    ];
+                };
   	        };
 	    };
     }
