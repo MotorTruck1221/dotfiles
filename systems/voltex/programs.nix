@@ -81,6 +81,7 @@
         thunderbird
         weechat
         nheko
+        signal-desktop
     ])
     
     ++
