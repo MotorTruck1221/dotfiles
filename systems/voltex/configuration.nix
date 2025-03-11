@@ -112,4 +112,8 @@
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
   documentation.man.generateCaches = false;
+  security.pam.services.kwallet = {
+      name = "kwallet";
+      enableKwallet = true;
+  };
 }
