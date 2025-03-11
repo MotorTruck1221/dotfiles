@@ -78,6 +78,7 @@
         watchman
         jdk
         android-studio
+        thunderbird
     ])
     
     ++
