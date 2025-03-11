@@ -79,6 +79,8 @@
         jdk
         android-studio
         thunderbird
+        weechat
+        nheko
     ])
     
     ++

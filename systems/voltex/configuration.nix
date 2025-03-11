@@ -34,7 +34,12 @@
     extraGroups = [ "docker" "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
-  nixpkgs.config.allowUnfree = true;
+    nixpkgs.config = {
+        allowUnfree = true;
+        permittedInsecurePackages = [
+            "olm-3.2.16"
+        ];
+    };
   environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.dotfiles/config";
       STARSHIP_CONFIG = "$HOME/.dotfiles/config/starship.toml";
@@ -106,4 +111,5 @@
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
   virtualisation.docker.enable = true;
   virtualisation.podman.enable = true;
+  documentation.man.generateCaches = false;
 }
