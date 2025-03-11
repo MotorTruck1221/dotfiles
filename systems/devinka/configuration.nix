@@ -8,7 +8,7 @@
   age.secrets.secret.owner = "cloudflared";
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "${host}";
+  networking.hostName = "devinka";
   networking.networkmanager.enable = true;
   time.timeZone = "America/Denver";
   i18n.defaultLocale = "en_US.UTF-8";

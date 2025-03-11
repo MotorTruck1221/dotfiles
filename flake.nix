@@ -33,7 +33,7 @@
                     modules = [
                         ./systems/devinka/configuration.nix
                         ./systems/devinka/programs.nix
-                        agenix.nixosModules.defaul
+                        agenix.nixosModules.default
                     ];
                 };
   	        };
