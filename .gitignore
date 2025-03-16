@@ -11,3 +11,4 @@ config/*
 !config/nvim/
 !config/zellij/
 !config/hypr/
+!config/waybar/

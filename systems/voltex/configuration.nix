@@ -116,4 +116,5 @@
       name = "kwallet";
       enableKwallet = true;
   };
+  fonts.packages = with pkgs; [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
