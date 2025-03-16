@@ -110,8 +110,7 @@
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
   virtualisation.docker.enable = true;
-  virtualisation.podman.enable = true;
-  documentation.man.generateCaches = false;
+  documentation.man.generateCaches = true;
   security.pam.services.kwallet = {
       name = "kwallet";
       enableKwallet = true;
