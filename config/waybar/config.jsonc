@@ -6,13 +6,9 @@
   "passtrough": false,
   "gtk-layer-shell": true,
   "height": 0,
-  "modules-left": ["hyprland/workspaces", "battery", "backlight"],
+  "modules-left": ["river/tags", "battery", "backlight"],
   "modules-center": ["clock"],
-  "modules-right": ["tray", "network", "pulseaudio", "custom/swaync"],
-  "hyprland/window": {
-    "format": "{}",
-    "max-length": 50
-  },
+  "modules-right": ["tray", "network", "pulseaudio"],
   "hyprland/workspaces": {
     "on-click": "activate",
     "format": "{icon}",
@@ -54,27 +50,7 @@
     "format": "{:%R   󰃭  %a %d  %b %Y}",
     "tooltip-format": "<big>{:%Y %B}</big>\n<tt><small>{calendar}</small></tt>",
   },
-  "custom/swaync": {
-    "tooltip": false,
-    "format": "{icon}",
-    "format-icons": {
-      "notification": "󱅫",
-      "none": "󰂚",
-      "dnd-notification": "󱏧<span foreground='red'><sup></sup></span>",
-      "dnd-none": "󱏧",
-      "inhibited-notification": "󰂚<span foreground='red'><sup></sup></span>",
-      "inhibited-none": "󰂚",
-      "dnd-inhibited-notification": "<span foreground='red'><sup></sup></span>",
-      "dnd-inhibited-none": "󱏧"
-    },
-    "return-type": "json",
-    "exec-if": "which swaync-client",
-    "exec": "swaync-client -swb",
-    "on-click": "~/.config/swaync/scripts/open-tray.sh",
-    "on-click-right": "swaync-client -d -sw",
-    "escape": true
-  },
-  "network": {
+"network": {
     "format": "{ifname}",
     "format-wifi": "󰤨   {essid} {bandwidthTotalBytes}",
     "format-ethernet": "󰊗  Enternet",

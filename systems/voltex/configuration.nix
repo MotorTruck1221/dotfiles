@@ -116,5 +116,6 @@
       name = "kwallet";
       enableKwallet = true;
   };
-  fonts.packages = with pkgs; [] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.enableDefaultPackages = true;
+  fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
 }
