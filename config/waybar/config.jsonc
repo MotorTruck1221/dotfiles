@@ -9,18 +9,6 @@
   "modules-left": ["river/tags", "battery", "backlight"],
   "modules-center": ["clock"],
   "modules-right": ["tray", "network", "pulseaudio"],
-  "hyprland/workspaces": {
-    "on-click": "activate",
-    "format": "{icon}",
-    "format-icons": {
-      "default": "",
-      "active": "󰮯",
-      "urgent": "󰊠"
-    },
-    "persistent_workspaces": {
-      "*": 5
-    }
-  },
  "backlight": {
         "device": "intel_backlight",
         "format": "{icon} {percent}%",

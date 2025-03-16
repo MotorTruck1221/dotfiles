@@ -31,7 +31,7 @@
     description = "MotorTruck1221";
     shell = pkgs.fish;
     passwordFile = config.age.secrets.secret.path;
-    extraGroups = [ "docker" "networkmanager" "wheel" "audio" "video" "power" ];
+    extraGroups = [ "audio" "docker" "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
     nixpkgs.config = {
@@ -118,4 +118,9 @@
   };
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  services.pipewire.enable = false;
+  services.pulseaudio = {
+      enable = true;
+      support32Bit = true;
+  };
 }
