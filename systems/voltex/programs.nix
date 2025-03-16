@@ -82,6 +82,7 @@
         weechat
         nheko
         signal-desktop
+        pydf
     ])
     
     ++
