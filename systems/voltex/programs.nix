@@ -86,6 +86,7 @@
         python3Full
         python3
         python3Packages.distutils
+        python3Packages.setuptools
     ])
     
     ++
