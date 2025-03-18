@@ -83,6 +83,8 @@
         nheko
         signal-desktop
         pydf
+        python3Full
+        python3
     ])
     
     ++
