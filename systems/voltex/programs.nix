@@ -85,6 +85,7 @@
         pydf
         python3Full
         python3
+        python3Packages.distutils
     ])
     
     ++
