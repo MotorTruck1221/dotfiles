@@ -83,10 +83,11 @@
         nheko
         signal-desktop
         pydf
-        python3Full
-        python3
-        python3Packages.distutils
-        python3Packages.setuptools
+        (python3.withPackages(python-pkgs: with python-pkgs; [
+            distutils
+            setuptools
+            pip
+        ]))
     ])
     
     ++
