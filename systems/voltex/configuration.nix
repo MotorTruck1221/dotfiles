@@ -117,8 +117,8 @@
   };
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
-  services.pipewire.enable = false;
-  services.pulseaudio = {
+  hardware.pipewire.enable = false;
+  hardware.pulseaudio = {
       enable = true;
       support32Bit = true;
   };
