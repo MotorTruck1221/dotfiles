@@ -27,10 +27,7 @@
 	    bluez
 	    bluez-tools
 	    blueman
-	    deno
-	    nodejs
-	    nodePackages.pnpm
-        curl
+	    curl
         wget
         zip
         unzip
@@ -38,6 +35,47 @@
         gzip
         gcc
         clang
+        openssl
+        zellij
+        ranger
+        dunst
+        hyprlock
+        upx
+        dust
+        openresty
+        nginx
+        distrobox
+        kdePackages.krdc
+        libsForQt5.krdc
+        hyprshot
+        wl-clipboard
+        libnotify
+        jq
+        grim
+        slurp
+        brightnessctl
+        playerctl
+        swayidle 
+        thunderbird
+        weechat
+        nheko
+        signal-desktop
+        pydf
+        ungoogled-chromium 
+    ])
+    
+    ++
+
+    (with pkgs-unstable; [
+        android-studio
+        watchman
+        jdk
+        bundix
+        zlib
+        zlib.dev 
+        deno
+	    nodejs
+	    nodePackages.pnpm
         zig
         rbenv
         gnumake
@@ -49,50 +87,12 @@
         postgresql.lib
         libxml2
         libxslt
-        pkg-config
-        bundix
-        zlib
-        zlib.dev
-        openssl
-        zellij
-        ranger
-        dunst
-        hyprlock
-        upx
-        dust
-        openresty
-        nginx
-        distrobox
-        luajit
-        kdePackages.krdc
-        libsForQt5.krdc
-        hyprshot
-        wl-clipboard
-        libnotify
-        jq
-        grim
-        slurp
-        brightnessctl
-        playerctl
-        swayidle
-        watchman
-        jdk
-        android-studio
-        thunderbird
-        weechat
-        nheko
-        signal-desktop
-        pydf
+        pkg-config 
+
         (python3.withPackages(python-pkgs: with python-pkgs; [
             distutils
             setuptools
             pip
         ]))
-    ])
-    
-    ++
-
-    (with pkgs-stable; [
-        ungoogled-chromium
     ]);
 }

@@ -105,7 +105,7 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false;
-  system.stateVersion = "25.05";
+  system.stateVersion = "24.11";
   nix.settings.experimental-features = ["nix-command" "flakes"];
   nix.settings.trusted-users = [ "root" "motortruck1221" ];
   nix.settings.allowed-users = [ "root" "motortruck1221" ];

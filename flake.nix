@@ -2,10 +2,10 @@
   description = "NixOS Config";
 
   inputs = {
-    nixpkgs = { 
+    nixpkgs-unstabel = { 
         url = "github:nixos/nixpkgs/nixos-unstable"; 
     };
-    nixpkgs-stable = {
+    nixpkgs = {
         url = "github:nixos/nixpkgs/nixos-24.11";
     };
     agenix = { 
@@ -15,7 +15,7 @@
 
   outputs = { self, nixpkgs, nixpkgs-stable, agenix, ... }@inputs: let
     system = "x86_64-linux";
-    pkgs-stable = nixpkgs-stable.legacyPackages.${system};
+    pkgs-stable = nixpkgs-unstable.legacyPackages.${system};
 	in {
       	    nixosConfigurations = {
 	            "voltex" = nixpkgs.lib.nixosSystem {
@@ -29,7 +29,7 @@
       		    };
                 "devinka" = nixpkgs.lib.nixosSystem {
                     inherit system;
-                    specialArgs = {inherit inputs agenix pkgs-stable;};
+                    specialArgs = {inherit inputs agenix pkgs-unstable;};
                     modules = [
                         ./systems/devinka/configuration.nix
                         ./systems/devinka/programs.nix
