@@ -2,7 +2,7 @@
   description = "NixOS Config";
 
   inputs = {
-    nixpkgs-unstabel = { 
+    nixpkgs-unstable = { 
         url = "github:nixos/nixpkgs/nixos-unstable"; 
     };
     nixpkgs = {
