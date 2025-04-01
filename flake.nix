@@ -13,9 +13,9 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-stable, agenix, ... }@inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, agenix, ... }@inputs: let
     system = "x86_64-linux";
-    pkgs-stable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
 	in {
       	    nixosConfigurations = {
 	            "voltex" = nixpkgs.lib.nixosSystem {
