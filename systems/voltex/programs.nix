@@ -18,9 +18,6 @@
 	    agenix.packages.${system}.default
 	    discord
 	    btop
-	    xdg-desktop-portal
-	    xdg-desktop-portal-gtk
-	    xdg-desktop-portal-wlr
 	    cava
 	    pamixer
 	    pavucontrol

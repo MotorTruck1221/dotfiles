@@ -94,7 +94,7 @@
   services.seatd.enable = true;
   services.flatpak = {
     enable = true;
-  };
+  }; 
   systemd.services.flatpak-repo = {
       wantedBy = [ "multi-user.target" ];
       path = [ pkgs.flatpak ];
@@ -117,9 +117,31 @@
   };
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs-unstable.nerd-fonts);
-  services.pipewire.enable = false;
-  hardware.pulseaudio = {
+  security.rtkit.enable = true;
+  services.pipewire = {
       enable = true;
-      support32Bit = true;
+      audio.enable = true;
+      pulse.enable = true;
+      alsa = {
+          enable = true;
+          support32Bit = true;
+      };
+      jack.enable = true;
+  };
+  services.greetd = {
+      enable = true;
+      settings = {
+          default_session = {
+              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd river";
+              user = "motortruck1221";
+          };
+      };
+  };
+  xdg.portal = {
+      enable = true;
+      wlr = {
+          enable = true;
+      };
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
   };
 }

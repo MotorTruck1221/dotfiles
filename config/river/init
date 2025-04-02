@@ -9,15 +9,6 @@ riverctl map normal Super+Shift F spawn 'hyprshot -m region --clipboard-only'
 riverctl map normal Super PRINT spawn 'hyprshot -m window --clipboard-only'
 riverctl map normal None PRINT spawn 'hyprshot -m output'
 
-# Auto start software
-riverctl spawn 'swww-daemon --format xrgb'
-riverctl spawn 'eww daemon --force-wayland'
-riverctl spawn 'waybar'
-riverctl spawn 'dunst -startup_notification'
-riverctl spawn 'wl-paste --type text --watch cliphist store'
-riverctl spawn 'wl-paste --type image --watch cliphist store'
-riverctl spawn 'swayidle -w before-sleep "loginctl lock-session && pidof hyprlock || hyprlock"'
-
 # General WM rules
 riverctl map-pointer normal Super BTN_LEFT move-view
 riverctl map-pointer normal Super+Shift BTN_LEFT resize-view
@@ -67,6 +58,15 @@ riverctl rule-add -app-id 'confirmreset*' float
 systemctl --user import-environment WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP=river
 systemctl --user restart xdg-desktop-portal
+
+# Auto start software
+riverctl spawn 'swww-daemon --format xrgb'
+riverctl spawn 'eww daemon --force-wayland'
+riverctl spawn 'waybar'
+riverctl spawn 'dunst -startup_notification'
+riverctl spawn 'wl-paste --type text --watch cliphist store'
+riverctl spawn 'wl-paste --type image --watch cliphist store'
+riverctl spawn 'swayidle -w before-sleep "loginctl lock-session && pidof hyprlock || hyprlock"'
 
 # Tiling
 riverctl default-layout wideriver
