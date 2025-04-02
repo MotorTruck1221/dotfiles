@@ -61,7 +61,8 @@
         nheko
         signal-desktop
         pydf
-        ungoogled-chromium 
+        ungoogled-chromium
+        pfetch
     ])
     
     ++
@@ -88,7 +89,6 @@
         libxml2
         libxslt
         pkg-config 
-
         (python3.withPackages(python-pkgs: with python-pkgs; [
             distutils
             setuptools

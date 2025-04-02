@@ -1,4 +1,4 @@
-{ config, pkgs, inputs, agenix, ... }:
+{ config, pkgs, pkgs-unstable, inputs, agenix, ... }:
 {
   imports = [
   	./voltex.nix
@@ -34,10 +34,12 @@
     extraGroups = [ "audio" "docker" "networkmanager" "wheel" "audio" "video" "power" ];
     packages = with pkgs; [];
   };
-  nixpkgs.config.allowUnfree = true;
-  nixpkgs.config.permittedInsecurePackages = [
-    "olm-3.2.16"
-  ];
+  nixpkgs.config = {
+      allowUnfree = true;
+      permittedInsecurePackages = [
+        "olm-3.2.16"
+      ];
+  };
   environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.dotfiles/config";
       STARSHIP_CONFIG = "$HOME/.dotfiles/config/starship.toml";
@@ -114,7 +116,7 @@
       enableKwallet = true;
   };
   fonts.enableDefaultPackages = true;
-  fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs.nerd-fonts);
+  fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs-unstable.nerd-fonts);
   services.pipewire.enable = false;
   hardware.pulseaudio = {
       enable = true;

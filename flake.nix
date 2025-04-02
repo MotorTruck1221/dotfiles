@@ -15,7 +15,7 @@
 
   outputs = { self, nixpkgs, nixpkgs-unstable, agenix, ... }@inputs: let
     system = "x86_64-linux";
-    pkgs-unstable = nixpkgs-unstable.legacyPackages.${system};
+    pkgs-unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
 	in {
       	    nixosConfigurations = {
 	            "voltex" = nixpkgs.lib.nixosSystem {
