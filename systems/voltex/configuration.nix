@@ -4,7 +4,7 @@
   	./voltex.nix
     ../../modules/desktops
   ];
-  age.secrets.secret.file = ./secrets/secret.age;
+  age.secrets.secret.file = ../../secrets/voltex.age;
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
