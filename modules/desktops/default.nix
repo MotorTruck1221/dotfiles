@@ -6,10 +6,11 @@
         ./agenix.nix
         #./audio.nix
         ./bluetooth.nix
-        #./desktop.nix
+        ./desktop.nix
         #./hypr.nix
         ./misc.nix
         #./qt.nix
-        #./terminal.nix
+        ./terminal.nix
+        ./flatpak.nix
     ];
 }

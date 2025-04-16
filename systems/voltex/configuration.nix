@@ -5,29 +5,7 @@
     ../../modules/desktops
   ];
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;  
-  programs.mtr.enable = true;
-  programs.gnupg.agent = {
-     enable = true;
-     enableSSHSupport = true;
-  };
-  programs.fish.enable = true;
-  programs.river = { 
-  	enable = true;
-	xwayland.enable = true;
-  };
-  programs.thunar = {
-      enable = true;
-      plugins = with pkgs.xfce; [
-        thunar-volman
-      ];
-  };
-  programs.xfconf.enable = true;
-  programs.appimage.binfmt = true;
-  programs.kdeconnect = {
-      enable = true;
-      package = pkgs.kdePackages.kdeconnect-kde;
-  };
+  boot.loader.efi.canTouchEfiVariables = true;    
   programs.nix-ld = {
       enable = true;
       libraries = with pkgs; [
@@ -38,22 +16,7 @@
         postgresql.dev
         postgresql.lib
       ];
-  };
-  programs.adb = {
-      enable = true;
-  };
-  services.tumbler.enable = true;
-  services.seatd.enable = true;
-  services.flatpak = {
-    enable = true;
-  }; 
-  systemd.services.flatpak-repo = {
-      wantedBy = [ "multi-user.target" ];
-      path = [ pkgs.flatpak ];
-      script = ''
-        flatpak remote-add --user --if-not-exists flathub https://flathub.org/repo/flathub.flatpakrepo
-      ''; 
-  };
+  };  
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false;
@@ -63,9 +26,12 @@
   nix.settings.allowed-users = [ "root" "motortruck1221" ];
   virtualisation.docker.enable = true;
   documentation.man.generateCaches = true;
-  security.pam.services.kwallet = {
-      name = "kwallet";
-      enableKwallet = true;
+  security.pam.services = {
+    kwallet = {
+        name = "kwallet";
+        enableKwallet = true;
+    };
+    hyprlock = {};
   };
   fonts.enableDefaultPackages = true;
   fonts.packages = with pkgs; [ dejavu_fonts texlivePackages.opensans ] ++ builtins.filter lib.attrsets.isDerivation (builtins.attrValues pkgs-unstable.nerd-fonts);
