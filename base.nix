@@ -1,4 +1,4 @@
-# Everything that I need for a base system. This is then built upon it depending on if it is a desktop/server
+# Base packages that don't need to be configured further then this.
 
 { config, pkgs, pkgs-unstable, agenix, ... }:
 {

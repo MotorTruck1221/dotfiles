@@ -1,5 +1,5 @@
 {
-  description = "NixOS Config";
+  description = "MotorTruck1221's NixOS Config";
 
   inputs = {
     nixpkgs-unstable = { 

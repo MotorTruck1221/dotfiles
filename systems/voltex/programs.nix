@@ -16,10 +16,7 @@
 	    cava
 	    pamixer
 	    pavucontrol
-	    bluez
-	    bluez-tools
-	    blueman
-        zellij
+	    zellij
         ranger
         dunst
         hyprlock
