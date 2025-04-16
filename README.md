@@ -2,10 +2,10 @@
 ---
 ## Pictures
 <p align="center">
-    <img src="./github/assets/1.png" /> <br>
-    <img src="./github/assets/2.png" /> <br>
-    <img src="./github/assets/3.png" /> <br>
-    <img src="./github/assets/4.png" /> <br>
+    <img src="./.github/assets/1.png" /> <br>
+    <img src="./.github/assets/2.png" /> <br>
+    <img src="./.github/assets/3.png" /> <br>
+    <img src="./.github/assets/4.png" /> <br>
 </p>
 ---
 ## Layout
