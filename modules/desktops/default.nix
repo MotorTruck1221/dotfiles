@@ -11,7 +11,7 @@
         ./hypr.nix
         ./misc.nix
         ./fonts.nix
-        #./qt.nix
+        ./qt.nix
         ./terminal.nix
         ./flatpak.nix
         ./dev.nix

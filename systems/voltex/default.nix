@@ -1,7 +1,7 @@
 { config, pkgs, pkgs-unstable, inputs, agenix, ... }:
 {
   imports = [
-  	./voltex.nix
+  	./hardware.nix
     ../../modules/desktops
   ];
   boot.loader.systemd-boot.enable = true;
