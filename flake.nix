@@ -20,8 +20,10 @@
       	    nixosConfigurations = {
 	            "voltex" = nixpkgs.lib.nixosSystem {
                     inherit system;
-                    hostname = "voltex";
-	   	            specialArgs = {inherit inputs agenix pkgs-unstable hostname;};
+	   	            specialArgs = {
+                        inherit inputs agenix pkgs-unstable;
+                        hostname = "voltex";
+                    };
 	   	            modules = [
                         ./base.nix
 	   	                ./systems/voltex/configuration.nix

@@ -5,6 +5,7 @@
     environment.systemPackages = 
     (with pkgs; [
         git
+        git-lfs
         fish
         fastfetch
         agenix.packages.${system}.default
