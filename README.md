@@ -1,4 +1,10 @@
-# MotorTruck1221's Dotfiles
+<h1 align="center">
+    <img src="./.github/nixos-logo.png" style="width: 100%;" />
+    <br>
+        MotorTruck1221's Dotfiles
+    <br>
+</h1>
+
 ---
 ## Pictures
 <p align="center">
