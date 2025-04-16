@@ -42,5 +42,5 @@
             setuptools
             pip
         ]))
-    ])
+    ]);
 }

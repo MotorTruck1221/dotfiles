@@ -2,11 +2,8 @@
 {
     environment.systemPackages = 
     (with pkgs; [
-    	git
-	    fish
 	    neovim
 	    starship
-	    fastfetch
 	    alacritty
 	    river
 	    swww
@@ -15,30 +12,17 @@
 	    wideriver
 	    bemenu
 	    waybar # For the actual bar, may be replaced with eww at some point
-	    agenix.packages.${system}.default
 	    discord
-	    btop
 	    cava
 	    pamixer
 	    pavucontrol
 	    bluez
 	    bluez-tools
 	    blueman
-	    curl
-        wget
-        zip
-        unzip
-        gnutar
-        gzip
-        gcc
-        clang
-        openssl
         zellij
         ranger
         dunst
         hyprlock
-        upx
-        dust
         openresty
         nginx
         distrobox
@@ -47,7 +31,6 @@
         hyprshot
         wl-clipboard
         libnotify
-        jq
         grim
         slurp
         brightnessctl
@@ -57,7 +40,6 @@
         weechat
         nheko
         signal-desktop
-        pydf
         ungoogled-chromium
     ])
     
@@ -66,18 +48,10 @@
     (with pkgs-unstable; [
         android-studio
         watchman
-        jdk
         bundix
-        zlib
-        zlib.dev 
-        deno
-	    nodejs
-	    nodePackages.pnpm
         zig
-        rbenv
-        gnumake
-        ruby.devEnv
         sqlite
+        rbenv
         libpcap
         postgresql
         postgresql.dev
@@ -85,10 +59,5 @@
         libxml2
         libxslt
         pkg-config 
-        (python3.withPackages(python-pkgs: with python-pkgs; [
-            distutils
-            setuptools
-            pip
-        ]))
     ]);
 }
