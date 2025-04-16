@@ -7,13 +7,7 @@
   age.secrets.secret.file = ../../secrets/voltex.age;
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
-  nixpkgs.config = {
-      allowUnfree = true;
-      permittedInsecurePackages = [
-        "olm-3.2.16"
-      ];
-  };
+  boot.loader.efi.canTouchEfiVariables = true; 
   environment.sessionVariables = {
       XDG_CONFIG_HOME = "$HOME/.dotfiles/config";
       STARSHIP_CONFIG = "$HOME/.dotfiles/config/starship.toml";

@@ -17,4 +17,5 @@
         layout = "us";
         variant = "";
     };
+    nixpkgs.config.allowUnfree = true;
 }

@@ -7,7 +7,7 @@
         ./bluetooth.nix
         #./desktop.nix
         #./hypr.nix
-        #./misc.nix
+        ./misc.nix
         #./qt.nix
         #./terminal.nix
     ];
