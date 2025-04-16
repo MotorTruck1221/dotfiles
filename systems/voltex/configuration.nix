@@ -5,12 +5,7 @@
     ../../modules/desktops
   ];
   boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true; 
-  environment.sessionVariables = {
-      XDG_CONFIG_HOME = "$HOME/.dotfiles/config";
-      STARSHIP_CONFIG = "$HOME/.dotfiles/config/starship.toml";
-      GIT_CONFIG_GLOBAL = "$HOME/.dotfiles/config/.gitconfig";
-  };
+  boot.loader.efi.canTouchEfiVariables = true;  
   programs.mtr.enable = true;
   programs.gnupg.agent = {
      enable = true;
@@ -46,15 +41,6 @@
   };
   programs.adb = {
       enable = true;
-  };
-  services.openssh.enable = true;
-  networking.nameservers = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
-  services.resolved = {
-      enable = true;
-      dnssec = "true";
-      domains = [ "~." ];
-      fallbackDns = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
-      dnsovertls = "true";
   };
   services.tumbler.enable = true;
   services.seatd.enable = true;

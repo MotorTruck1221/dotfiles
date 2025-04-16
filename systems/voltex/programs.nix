@@ -16,7 +16,10 @@
 	    cava
 	    pamixer
 	    pavucontrol
-	    zellij
+	    bluez
+	    bluez-tools
+	    blueman
+        zellij
         ranger
         dunst
         hyprlock
@@ -38,6 +41,7 @@
         nheko
         signal-desktop
         ungoogled-chromium
+        gimp
     ])
     
     ++
