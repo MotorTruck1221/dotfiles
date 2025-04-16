@@ -1,6 +1,6 @@
 { pkgs, ... }:
 {
-    environment.SystemPackages = [
+    environment.systemPackages = with pkgs; [
        bluez
        bluez-tools
     ];

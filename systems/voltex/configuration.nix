@@ -8,8 +8,6 @@
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
-  networking.hostName = "voltex";
-  networking.networkmanager.enable = true;
   time.timeZone = "America/Denver";
   i18n.defaultLocale = "en_US.UTF-8";
   i18n.extraLocaleSettings = {
