@@ -4,4 +4,5 @@ let
   systems = [ voltex devinka ];
 in {
     "voltex.age".publicKeys = [ voltex ];
+    "devinka.age".publicKeys = systems;
 }
