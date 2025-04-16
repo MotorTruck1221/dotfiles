@@ -1,5 +1,5 @@
 <h1 align="center">
-    <img src="./.github/nixos-logo.png" style="width: 100%;" />
+    <img src="./.github/assets/nixos-logo.png" style="width: 100%;" />
     <br>
         MotorTruck1221's Dotfiles
     <br>
