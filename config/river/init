@@ -66,6 +66,7 @@ riverctl spawn 'waybar'
 riverctl spawn 'dunst -startup_notification'
 riverctl spawn 'wl-paste --type text --watch cliphist store'
 riverctl spawn 'wl-paste --type image --watch cliphist store'
+riverctl spawn 'kwalletd6'
 riverctl spawn 'swayidle -w before-sleep "loginctl lock-session && pidof hyprlock || hyprlock"'
 
 # Tiling

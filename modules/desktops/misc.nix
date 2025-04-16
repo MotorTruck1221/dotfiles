@@ -20,4 +20,22 @@
       enable = true;
   };
   services.seatd.enable = true;
+  virtualisation.docker.enable = true;
+  security.pam.services.kwallet = {
+        name = "kwallet";
+        enableKwallet = true;
+    };
+  security.rtkit.enable = true;
+  programs.nix-ld = {
+    enable = true;
+    libraries = with pkgs; [
+        fuse
+        glib
+        dbus
+        stdenv.cc.cc.lib
+        postgresql.dev
+        postgresql.lib
+    ];
+  }; 
+  environment.systemPackages = with pkgs; [ distrobox ];
 }

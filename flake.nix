@@ -26,8 +26,7 @@
                     };
 	   	            modules = [
                         ./base.nix
-	   	                ./systems/voltex/configuration.nix
-			            ./systems/voltex/programs.nix
+	   	                ./systems/voltex
 			            agenix.nixosModules.default
 	   	            ];
       		    };

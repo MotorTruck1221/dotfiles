@@ -14,5 +14,40 @@
     programs.kdeconnect = {
       enable = true;
       package = pkgs.kdePackages.kdeconnect-kde;
-  };
+    };
+    xdg.portal = {
+      enable = true;
+      wlr = {
+          enable = true;
+      };
+      extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
+    };
+    environment.systemPackages = with pkgs; [
+        river
+        swww
+        eww
+        wideriver
+        bemenu
+        waybar
+        discord
+        cava
+        pamixer
+        pavucontrol
+        dunst
+        hyprlock
+        hyprshot
+        wl-clipboard
+        libnotify
+        grim
+        slurp
+        brightnessctl
+        playerctl
+        swayidle 
+        thunderbird
+        weechat
+        nheko
+        signal-desktop
+        ungoogled-chromium
+        gimp
+    ];
 }
