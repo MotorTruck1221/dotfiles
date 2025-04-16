@@ -22,6 +22,7 @@
                     inherit system;
 	   	            specialArgs = {inherit inputs agenix pkgs-unstable;};
 	   	            modules = [
+                        ./base.nix
 	   	                ./systems/voltex/configuration.nix
 			            ./systems/voltex/programs.nix
 			            agenix.nixosModules.default

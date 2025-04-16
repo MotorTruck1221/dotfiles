@@ -59,7 +59,6 @@
         signal-desktop
         pydf
         ungoogled-chromium
-        pfetch
     ])
     
     ++
