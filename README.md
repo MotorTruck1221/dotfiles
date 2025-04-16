@@ -12,6 +12,7 @@
     <img src="./.github/assets/2.png" /> <br>
     <img src="./.github/assets/3.png" /> <br>
     <img src="./.github/assets/4.png" /> <br>
+    <img src="./.github/assets/5.png" /> <br>
 </p>
 
 ---
@@ -33,4 +34,5 @@
 
 - WM - [river](https://codeberg.org/river/river)
 - Bar - [waybar](https://github.com/Alexays/wayber) - Will be switched to [eww](https://github.com/elkowar/eww) at some point
+
 
