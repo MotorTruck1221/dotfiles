@@ -16,6 +16,7 @@
     - [server](./modules/servers) - A mor minimal server based setup
 - [secrets](./secrets) - Stored secrets using [agenix](https://github.com/ryantm/agenix)
 - [config](./config) - General dotfile config files, slowly this is going to be moved to the [modules](./modules) folder :p
+- [wallpapers](./wallpapers) - All of my wallpapers as a **submodule** due to it being over 4GB's in size
 ---
 ## About
 
