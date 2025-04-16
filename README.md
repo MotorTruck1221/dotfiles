@@ -1,6 +1,4 @@
 <h1 align="center">
-    <img src="./.github/assets/nixos-logo.png" width="100px" />
-    <br>
         MotorTruck1221's Dotfiles
     <br>
 </h1>
@@ -14,6 +12,18 @@
     <img src="./.github/assets/4.png" /> <br>
     <img src="./.github/assets/5.png" /> <br>
 </p>
+
+---
+## Usage
+
+1. Please don't use this, it's very scuffed LOL
+2. Clone the repo
+3. `sudo nixos-rebuild switch --flake .#yourdesktop`
+
+I have an easy init.sh script ready to go in case you need to kick stuff off with ease. (after installation)
+```bash
+curl https://raw.githubusercontent.com/MotorTruck1221/dotfiles/refs/heads/main/init.sh | bash
+```
 
 ---
 ## Layout
@@ -32,7 +42,27 @@
 ---
 ## About
 
+- I wanted this to be as modular as possible to manage all of the server and desktops/laptops I have.
+- I didn't want to use Home Manager as this is my first time playing around w/NixOS and that seems like it abstracts tons
+
+### What I wanna do later
+- [ ] - Make a CLI that can install and be ready to go!
+- [ ] - Clean this up slightly more
+
+---
+
+## Software used (some of it):
+
 - WM - [river](https://codeberg.org/river/river)
 - Bar - [waybar](https://github.com/Alexays/wayber) - Will be switched to [eww](https://github.com/elkowar/eww) at some point
-
-
+- Application Launcher - [Bemenu](https://github.com/cloudef/bemenu)
+- Music player - [Cider](https://cider.sh)
+- Notification Daemon - [Dunst](https://github.com/dunst-project/dunst)
+- Terminal - [Alacritty](https://github.com/alacritty/alacritty)
+- Shell - [Fish](https://github.com/fish-shell/fish) w/ [Fisher](https://github.com/jorgebucaran/fisher) & [Starship](https://github.com/starship/starship)
+- Text Eidtor/IDE - [Neovim](https://github.com/neovim/neovim) w/ [Lazy.nvim](https://github.com/folke/lazy.nvim)
+- File manager - [Thunar](https://gitlab.xfce.org/xfce/thunar) & [Ranger](https://github.com/ranger/ranger)
+- Color Scheme - [Gruvbox Dark](https://github.com/morhetz/gruvbox)
+- Lockscreen(s) - [Tuigreet](https://github.com/apognu/tuigreet) & [Hyprlock](https://github.com/hyprwm/hyprlock)
+- Screenshots - [Hyprshot](https://github.com/gustash/hyprshot)
+- Clipboard - [Wl-clipboard](https://github.com/bugaevc/wl-clipboard)
