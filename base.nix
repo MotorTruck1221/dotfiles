@@ -1,9 +1,9 @@
 # Base packages that don't need to be configured further then this.
 
-{ config, pkgs, pkgs-unstable, agenix, ... }:
+{ config, pkgs, , agenix, ... }:
 {
     environment.systemPackages = 
-    (with pkgs; [
+    with pkgs; [
         git
         git-lfs
         fish
@@ -15,33 +15,12 @@
         zip
         unzip
         gnutar
-        gzip
-        gcc
-        clang
+        gzip 
         openssl
         ranger
         upx
         dust
         jq
         pydf 
-    ])
-
-    ++
-
-    (with pkgs-unstable; [
-        jdk
-        zlib
-        zlib.dev
-        deno
-        nodejs
-        nodePackages.pnpm
-        zig
-        gnumake
-        ruby.devEnv
-        (python3.withPackages(python-pkgs: with python-pkgs; [
-            distutils
-            setuptools
-            pip
-        ]))
-    ]);
+    ] 
 }
