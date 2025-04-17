@@ -13,3 +13,4 @@ It should
 - Print hardware file for easy copy and paste
 - Prompt for a reboot
 - If desktop, make sure the repo is cloned (READ-ONLY if remotely managed - MAY change in the future)
+- Handle self upgrades or other nice stuff
