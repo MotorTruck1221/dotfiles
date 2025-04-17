@@ -22,5 +22,5 @@
         dust
         jq
         pydf 
-    ] 
+    ]; 
 }
