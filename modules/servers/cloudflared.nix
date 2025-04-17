@@ -1,4 +1,4 @@
-{ pkgs, hostname, ... }: 
+{ config, pkgs, hostname, ... }: 
 let
     cloudflaredTunnels = if hostname == "devinka" then
         {
