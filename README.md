@@ -46,7 +46,7 @@ curl https://raw.githubusercontent.com/MotorTruck1221/dotfiles/refs/heads/main/i
 - I didn't want to use Home Manager as this is my first time playing around w/NixOS and that seems like it abstracts tons
 
 ### What I wanna do later
-- [ ] - Make a CLI that can install and be ready to go! (Maybe in Zig or some other language I would like to learn :p)
+- [ ] - Make a CLI that can install and be ready to go! - Done in Zig
 - [ ] - Clean this up slightly more
 
 ---
