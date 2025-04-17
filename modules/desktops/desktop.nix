@@ -33,9 +33,7 @@
         cava
         pamixer
         pavucontrol
-        dunst
-        hyprlock
-        hyprshot
+        dunst 
         wl-clipboard
         libnotify
         grim

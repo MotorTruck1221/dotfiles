@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, inputs, agenix, ... }:
+{ config, pkgs, pkgs-unstable, inputs, agenix, lib, ... }:
 {
   imports = [
   	./hardware.nix
@@ -8,6 +8,7 @@
   boot.loader.efi.canTouchEfiVariables = true;  
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
+  networking.useDHCP = lib.mkDefault true;
   networking.firewall.enable = false;
   system.stateVersion = "24.11";
 }

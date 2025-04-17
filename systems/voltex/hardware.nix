@@ -21,7 +21,6 @@
 
   swapDevices = [{ device = "/dev/disk/by-uuid/3d9fca55-f57a-4a24-8acd-e891c2ac6e03"; }];
 
-  networking.useDHCP = lib.mkDefault true;
   # networking.interfaces.enp3s0.useDHCP = lib.mkDefault true;
   # networking.interfaces.wlp2s0.useDHCP = lib.mkDefault true;
   
