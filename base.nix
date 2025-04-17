@@ -1,6 +1,6 @@
 # Base packages that don't need to be configured further then this.
 
-{ config, pkgs, , agenix, ... }:
+{ config, pkgs, agenix, ... }:
 {
     environment.systemPackages = 
     with pkgs; [
