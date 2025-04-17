@@ -11,11 +11,11 @@
       };
     };
     environment.systemPackages = with pkgs; [
-        neovim
-        starship
         alacritty
         thefuck
         ranger
-        zellij
+        zellij 
+        neovim
+        starship
     ];
 }
