@@ -32,10 +32,13 @@
       		    };
                 "devinka" = nixpkgs.lib.nixosSystem {
                     inherit system;
-                    specialArgs = {inherit inputs agenix pkgs-unstable;};
+                    specialArgs = {
+                        inherit inputs agenix pkgs-unstable;
+                        hostname = "devinka";
+                    };
                     modules = [
-                        ./systems/devinka/configuration.nix
-                        ./systems/devinka/programs.nix
+                        ./base.nix
+                        ./systems/devinka
                         agenix.nixosModules.default
                     ];
                 };

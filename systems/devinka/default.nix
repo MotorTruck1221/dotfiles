@@ -1,7 +1,8 @@
 { config, pkgs, inputs, agenix, ... }:
 {
   imports = [
-  	./devinka.nix
+  	./hardware.nix
+    ../../modules/servers
   ];
 
   age.secrets.devinka.file = ./secrets/devinka.age;
