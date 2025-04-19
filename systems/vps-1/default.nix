@@ -11,6 +11,10 @@
 
  #boot.loader.systemd-boot.enable = true;
  #boot.loader.efi.canTouchEfiVariables = true;
+  boot.loader.grub = {
+      enable = true;
+      device = "/dev/sda";
+  };
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   networking.firewall.enable = false; 
