@@ -12,7 +12,6 @@ let
                 };
             };
         }
-        else 
-            null;
+        else {};
 in
     cloudflaredTunnels
