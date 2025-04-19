@@ -42,7 +42,7 @@
                         agenix.nixosModules.default
                     ];
                 };
-                "vps-1" = nixpkgs.lib.nixosSystem = {
+                "vps-1" = nixpkgs.lib.nixosSystem {
                     inherit system;
                     specialArgs = {
                         inherit inputs agenix pkgs-unstable;
