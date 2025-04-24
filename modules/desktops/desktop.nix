@@ -47,5 +47,6 @@
         signal-desktop
         ungoogled-chromium
         gimp
+        gnome-software
     ];
 }
