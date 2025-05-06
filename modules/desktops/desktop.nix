@@ -48,5 +48,6 @@
         ungoogled-chromium
         gimp
         gnome-software
+        inkscape
     ];
 }
