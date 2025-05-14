@@ -33,6 +33,7 @@
         postgresql.lib
         libxml2
         libxslt
-        pkg-config  
+        pkg-config
+        go
     ]);
 }
