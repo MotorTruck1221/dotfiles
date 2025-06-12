@@ -6,6 +6,7 @@
   ];
 
   age.secrets.devinka.file = ../../secrets/devinka.age;
+  age.secrets.wireguard.file = ../../secrets/wireguard.age;
   age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
   age.secrets.devinka.owner = "cloudflared";
 
