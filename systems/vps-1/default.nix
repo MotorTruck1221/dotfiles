@@ -27,9 +27,11 @@
             address = "104.36.84.1";
             interface = "enp3s0";
         };
-        firewall.enable = false;
+        firewall = {
+            enable = true;
+            allowedTCPPorts = [ 80, 443, 22 ];
+            allowedUDPPorts = [];
+        };
     };
-  # networking.firewall.allowedTCPPorts = [ ... ];
-  # networking.firewall.allowedUDPPorts = [ ... ];
     system.stateVersion = "24.11";
 }
