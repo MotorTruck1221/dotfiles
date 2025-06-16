@@ -1,7 +1,6 @@
 { hostname, config, ... }:
 {
     networking.hostName = "${hostname}";
-    networking.networkmanager.enable = true;
     services.openssh.enable = true;
     networking.nameservers = [ "1.1.1.1#one.one.one.one" "8.8.8.8" ];
     services.resolved = {

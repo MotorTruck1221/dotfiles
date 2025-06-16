@@ -31,12 +31,7 @@
   #networking.interfaces.enp3s0.ipv4.addresses = [{
   #address = "104.36.87.114";
   #	prefixLength =  22;	
-  #}];
-
-  #networking.defaultGateway = {
-  #	address = "104.36.84.1";
-  #	interface = "enp3s0";
-  #};
+  #}]; 
 
   #networking.nameservers = [ "1.1.1.1" ];
 
