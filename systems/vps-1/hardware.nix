@@ -27,11 +27,7 @@
   # (the default) this is the recommended approach. When using systemd-networkd it's
   # still possible to use this option, but it's recommended to use it in conjunction
   # with explicit per-interface declarations with `networking.interfaces.<interface>.useDHCP`.
-  #networking.useDHCP = lib.mkDefault true;
-  #networking.interfaces.enp3s0.ipv4.addresses = [{
-  #address = "104.36.87.114";
-  #	prefixLength =  22;	
-  #}]; 
+  #networking.useDHCP = lib.mkDefault true; 
 
   #networking.nameservers = [ "1.1.1.1" ];
 
