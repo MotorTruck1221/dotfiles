@@ -27,10 +27,13 @@
             address = "104.36.84.1";
             interface = "enp3s0";
         };
+        nftables.enable = true;
         firewall = {
             enable = true;
             allowedTCPPorts = [ 80 443 22 ];
             allowedUDPPorts = [];
+            # Disables the ability to ping the server
+            allowPing = false;
         };
     };
     system.stateVersion = "24.11";
