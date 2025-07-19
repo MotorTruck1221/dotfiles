@@ -1,7 +1,7 @@
 { config, pkgs, ... }:
 {
     services.haproxy = {
-        enable = "true";
+        enable = true;
         config = ''
         global
             daemon
