@@ -35,20 +35,7 @@
             # Disables the ability to ping the server
             allowPing = false;
         }; 
-    };
-
-    virtualisation.oci-containers = {
-        backend = "docker";
-        containers = {
-            incognito = {
-                image = "motortruck1221/incognito:latest";
-                ports = ["8080:8000"];
-                cmd = [
-                    "full"
-                ];
-            };
-        };
-    };
+    }; 
 
     system.stateVersion = "24.11";
 }
