@@ -10,6 +10,9 @@
   #age.secrets.devinka.owner = "cloudflared";
   #age.secrets.wireguard.file = ../../secrets/wireguard.age;
   #age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
+  age.secrets.haproxy-cfg.file = ../../secrets/haproxy.cfg.age;
+  age.identityPaths = [ "/home/motortruck1221/.sshh/id_ed25519" ];
+  age.secrets.haproxy-cfg.owner = "haproxy";
 
  #boot.loader.systemd-boot.enable = true;
  #boot.loader.efi.canTouchEfiVariables = true;
