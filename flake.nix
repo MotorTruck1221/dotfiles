@@ -11,9 +11,6 @@
     agenix = { 
         url = "github:ryantm/agenix";
     };
-    morph = {
-        url = "github:DBCDK/morph";
-    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, agenix, ... }@inputs: let
