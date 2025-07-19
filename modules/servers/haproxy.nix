@@ -2,6 +2,6 @@
 {
     services.haproxy = {
         enable = true;
-        config = "${config.age.secrets.haproxy-cfg.path}";
+        config = "${config.age.secrets."haproxy.cfg".path}";
     };
 }
