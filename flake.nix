@@ -44,6 +44,7 @@
                         ./base.nix
                         ./systems/devinka
                         agenix.nixosModules.default
+                        sops-nix.nixosModules.default
                     ];
                 };
                 "vps-1" = nixpkgs.lib.nixosSystem {
