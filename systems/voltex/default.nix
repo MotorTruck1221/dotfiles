@@ -23,7 +23,10 @@
   # networking.firewall.allowedTCPPorts = [ ... ];
   # networking.firewall.allowedUDPPorts = [ ... ];
   #networking.useDHCP = lib.mkDefault true;
-  networking.wg-quick.interfaces.wg0.configFile = "${config.age.secrets.wireguard.path}";
+  networking.wg-quick.interfaces.wg0 = {
+      configFile = "${config.sops.secrets.wireguard.path}";
+      autostart = false;
+  };
   networking.firewall.enable = false;
   system.stateVersion = "24.11";
 }
