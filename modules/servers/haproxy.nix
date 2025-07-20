@@ -6,6 +6,7 @@
         requires = [];
         wantedBy = [ "multi-user.target" ];
         serviceConfig = {
+            type = "exec";
             ExecStart = "${pkgs.haproxy}/bin/haproxy -f /run/secrets/haproxy";
             Restart = "on-failure";
         };
