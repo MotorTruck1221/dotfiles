@@ -1,4 +1,4 @@
-{ config, pkgs, pkgs-unstable, inputs, agenix, sops-nix, lib, ... }:
+{ config, pkgs, pkgs-unstable, inputs, lib, ... }:
 {
   imports = [
   	./hardware.nix

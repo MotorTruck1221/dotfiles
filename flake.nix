@@ -24,26 +24,24 @@
 	            "voltex" = nixpkgs.lib.nixosSystem {
                     inherit system;
 	   	            specialArgs = {
-                        inherit inputs agenix pkgs-unstable;
+                        inherit inputs pkgs-unstable;
                         hostname = "voltex";
                     };
 	   	            modules = [
                         ./base.nix
 	   	                ./systems/voltex
-			            agenix.nixosModules.default
                         sops-nix.nixosModules.default
 	   	            ];
       		    };
                 "devinka" = nixpkgs.lib.nixosSystem {
                     inherit system;
                     specialArgs = {
-                        inherit inputs agenix pkgs-unstable;
+                        inherit inputs pkgs-unstable;
                         hostname = "devinka";
                     };
                     modules = [
                         ./base.nix
                         ./systems/devinka
-                        agenix.nixosModules.default
                         sops-nix.nixosModules.default
                     ];
                 };
