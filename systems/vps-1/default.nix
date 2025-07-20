@@ -9,7 +9,7 @@
   sops.age.keyFile = "/home/motortruck1221/.hidden/key.txt";
   sops.age.generateKey = false;
   sops.secrets = {
-      haproxy-cfg = {
+      haproxy = {
           format = "binary";
           sopsFile = ../../secrets/haproxy.cfg;
           mode = "0440";
