@@ -10,9 +10,11 @@
   sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
   sops.age.keyFile = "/home/motortruck1221/.dotfiles/secrets/keys.txt";
   sops.age.generateKey = false;
-  sops.secrets.foo = {
-      sopsFile = ../../secrets/test.yaml;
-      format = "yaml";
+  sops.secrets = {
+      wireguard = {
+          format = "binary";
+          sopsFile = ../../secrets/wireguard.txt;
+      };
   };
 
   boot.loader.systemd-boot.enable = true;
