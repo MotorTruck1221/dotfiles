@@ -2,8 +2,8 @@
 {
     systemd.services.hproxy = {
         description = "HAProxy";
-        after = [ "network.target" "sops-nix.service" ];
-        requires = [ "sops-nix.service" ];
+        after = [ "network.target" ];
+        requires = [];
         wantedBy = [ "multi-user.target" ];
         serviceConfig = {
             ExecStart = "${pkgs.haproxy}/bin/haproxy -f /run/secrets/haproxy";
