@@ -12,3 +12,4 @@ config/*
 !config/zellij/
 !config/hypr/
 !config/waybar/
+secrets/keys.txt

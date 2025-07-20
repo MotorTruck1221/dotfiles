@@ -11,6 +11,9 @@
     agenix = { 
         url = "github:ryantm/agenix";
     };
+    sops-nix = {
+        url = "github:Mic92/sops-nix";
+    };
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, agenix, ... }@inputs: let
@@ -28,6 +31,7 @@
                         ./base.nix
 	   	                ./systems/voltex
 			            agenix.nixosModules.default
+                        sops-nix-nixosModules.default
 	   	            ];
       		    };
                 "devinka" = nixpkgs.lib.nixosSystem {
