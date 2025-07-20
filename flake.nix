@@ -55,6 +55,7 @@
                         ./base.nix
                         ./systems/vps-1
                         agenix.nixosModules.default
+                        sops-nix.nixosModules.default
                     ];
                 };
   	        };

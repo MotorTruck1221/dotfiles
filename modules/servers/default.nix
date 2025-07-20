@@ -6,8 +6,8 @@
         ####
         ./misc.nix
         ./cloudflared.nix
-        #./haproxy.nix
-        #./oci-containers.nix
+        ./haproxy.nix
+        ./oci-containers.nix
     ];
   programs.fish.enable = true;
   services.openssh.enable = true;
