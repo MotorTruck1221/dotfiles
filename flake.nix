@@ -16,7 +16,7 @@
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, agenix, ... }@inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, agenix, sops-nix, ... }@inputs: let
     system = "x86_64-linux";
     pkgs-unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
 	in {
@@ -31,7 +31,7 @@
                         ./base.nix
 	   	                ./systems/voltex
 			            agenix.nixosModules.default
-                        sops-nix-nixosModules.default
+                        sops-nix.nixosModules.default
 	   	            ];
       		    };
                 "devinka" = nixpkgs.lib.nixosSystem {
