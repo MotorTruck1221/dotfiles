@@ -5,14 +5,17 @@
     ../../modules/servers
   ];
 
-  #age.secrets.devinka.file = ../../secrets/devinka.age;
-  #age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
-  #age.secrets.devinka.owner = "cloudflared";
-  #age.secrets.wireguard.file = ../../secrets/wireguard.age;
-  #age.identityPaths =  [ "/home/motortruck1221/.ssh/id_ed25519" ];
-  age.secrets."haproxy.cfg".file = ../../secrets/haproxy.cfg.age;
-  age.identityPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
-  age.secrets."haproxy.cfg".owner = "haproxy";
+  sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
+  sops.age.keyFile = "/home/motortruck1221/.hidden/key.txt";
+  sops.age.generateKey = false;
+  sops.secrets = {
+      haproxy = {
+          format = "binary";
+          sopsFile = ../../secrets/haproxy.cfg;
+          mode = "0440";
+          owner = "haproxy";
+      };
+  };
 
  #boot.loader.systemd-boot.enable = true;
  #boot.loader.efi.canTouchEfiVariables = true;

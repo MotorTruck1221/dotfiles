@@ -1,10 +1,12 @@
 keys:
   - &voltex age1zwgym2vq9sldmnj60r882h9k34fw4g4x32zszg8zwkzcp2s9sv8skp8d8d
   - &devinka age19z03ka6pr0men83wzj8s73a4rg5cufcch24dewtuvs026456dgas4jle9c
+  - &vps1 age1rjw5aq3xytlvwl6a6pvzp6ckeml04p0cjxya9y66w7lm2j2s8yes84pqgz
 creation_rules:
-  - path_regex: secrets/[^/]+\.(yaml|json|env|ini|txt)$
+  - path_regex: secrets/[^/]+\.(yaml|json|env|ini|txt|cfg)$
     key_groups:
       - age:
         - *voltex
         - *devinka
+        - *vps1
       
