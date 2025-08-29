@@ -10,6 +10,10 @@
                     "full"
                 ];
             };
+            epoxy = {
+                image = "motortruck1221/wisp-server-rust:latest";
+                ports = [];
+            };
         };
     };
 }
