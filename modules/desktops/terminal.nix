@@ -10,12 +10,16 @@
           };
       };
     };
-    environment.systemPackages = with pkgs; [
+    environment.systemPackages = 
+    (with pkgs; [
         alacritty
         thefuck
         ranger
         zellij 
-        neovim
         starship
-    ];
+    ])
+    ++
+    (with pkgs-unstable; [
+        neovim
+    ]);
 }

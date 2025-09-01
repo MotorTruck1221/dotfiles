@@ -1,6 +1,6 @@
 # Base packages that don't need to be configured further then this.
 
-{ config, pkgs, agenix, ... }:
+{ config, pkgs, ... }:
 {
     environment.systemPackages = 
     with pkgs; [
@@ -8,7 +8,6 @@
         git-lfs
         fish
         fastfetch
-        agenix.packages.${system}.default
         btop
         curl
         wget
