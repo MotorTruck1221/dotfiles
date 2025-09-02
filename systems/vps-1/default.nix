@@ -3,6 +3,7 @@
   imports = [
   	./hardware.nix
     ../../modules/servers
+    ../../modules/servers/haproxy.nix
   ];
 
   sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
