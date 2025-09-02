@@ -12,7 +12,7 @@
             };
             epoxy = {
                 image = "motortruck1221/wisp-server-rust:latest";
-                ports = [];
+                ports = ["4000:4000"];
             };
         };
     };
