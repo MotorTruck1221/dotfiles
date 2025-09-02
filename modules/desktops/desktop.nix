@@ -1,5 +1,9 @@
 { pkgs, ... }:
 {
+    programs.appimage = {
+        enable = true;
+        binfmt = true;
+    };
     programs.river = { 
   	    enable = true;
 	    xwayland.enable = true;
