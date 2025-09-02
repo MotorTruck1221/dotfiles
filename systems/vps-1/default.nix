@@ -3,7 +3,8 @@
   imports = [
   	./hardware.nix
     ../../modules/servers
-    ../../modules/servers/haproxy.nix
+    ../../modules/servers/optional/oci-containers.nix
+    ../../modules/servers/optional/haproxy.nix
   ];
 
   sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
