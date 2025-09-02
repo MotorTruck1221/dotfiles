@@ -7,7 +7,7 @@
                 image = "motortruck1221/incognito:latest";
                 ports = ["8080:8000"];
                 cmd = [
-                    "full"
+                    "standalone"
                 ];
             };
             epoxy = {
