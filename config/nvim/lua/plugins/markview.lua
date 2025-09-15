@@ -16,8 +16,10 @@ return {
                     }
                 }
             },
-            split_conf = {
-                split = "right"
+            preview = {
+                splitview_winopts = {
+                    split = "right"
+                }
             }
         })
     end
