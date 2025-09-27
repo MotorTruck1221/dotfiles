@@ -53,5 +53,6 @@
         gimp
         gnome-software
         inkscape
+        spotify
     ];
 }
