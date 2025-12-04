@@ -4,7 +4,7 @@
         enable = true;
         binfmt = true;
     };
-    programs.river = { 
+    programs.river-classic = { 
   	    enable = true;
 	    xwayland.enable = true;
     };
@@ -27,7 +27,7 @@
       extraPortals = [ pkgs.xdg-desktop-portal-gtk ];
     };
     environment.systemPackages = with pkgs; [
-        river
+        river-classic
         swww
         eww
         wideriver

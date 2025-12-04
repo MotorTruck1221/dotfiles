@@ -5,7 +5,7 @@
       enable = true;
       settings = {
           default_session = {
-              command = "${pkgs.greetd.tuigreet}/bin/tuigreet --time --cmd river";
+              command = "${pkgs.tuigreet}/bin/tuigreet --time --cmd river";
               user = "motortruck1221";
           };
       };
@@ -13,7 +13,7 @@
     environment.systemPackages = 
     (with pkgs; [
         alacritty
-        thefuck
+        pay-respects
         ranger
         zellij 
         starship
