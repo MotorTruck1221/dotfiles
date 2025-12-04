@@ -18,6 +18,10 @@
           #owner = "haproxy";
           #group = "haproxy";
       };
+      cloudflare-api = {
+          format = "dotenv";
+          sopsFile = ../../secrets/cloudflare.env;
+      };
   };
 
  #boot.loader.systemd-boot.enable = true;
