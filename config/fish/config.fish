@@ -7,5 +7,4 @@ alias dev="zellij -c $HOME/.dotfiles/config/zellij/config.kdl"
 alias pn="pnpm"
 
 status --is-interactive; and rbenv init - fish | source
-thefuck --alias | source
 starship init fish | source
