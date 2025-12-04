@@ -4,7 +4,7 @@
         acceptTerms = true;
         defaults = {
             email = "motortruck1221@protonmail.com";
-            server = "https://acme-staging-v02.api.letsencrypt.org/directory";
+            #server = "https://acme-staging-v02.api.letsencrypt.org/directory";
         };
         certs."incog.works" = {
             dnsProvider = "cloudflare";
