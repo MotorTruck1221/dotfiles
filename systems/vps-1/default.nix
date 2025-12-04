@@ -44,7 +44,7 @@
         nftables.enable = true;
         firewall = {
             enable = true;
-            allowedTCPPorts = [ 443 22 ];
+            allowedTCPPorts = [ 80 443 22 ];
             allowedUDPPorts = [];
             # Disables the ability to ping the server
             allowPing = false;
