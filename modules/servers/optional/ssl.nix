@@ -13,6 +13,7 @@
         certs."nebulaservices.org" = {
             dnsProvider = "cloudflare";
             environmentFile = config.sops.secrets.cloudflare-api.path;
+            extraDomainNames = [ "nebulaproxy.io" ];
         };
     };
 }

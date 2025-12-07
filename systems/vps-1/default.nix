@@ -48,7 +48,7 @@
             allowedUDPPorts = [];
             # Disables the ability to ping the server
             allowPing = false;
-        }; 
+        };
     }; 
 
     system.stateVersion = "24.11";
