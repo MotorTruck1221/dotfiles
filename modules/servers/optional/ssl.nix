@@ -10,5 +10,9 @@
             dnsProvider = "cloudflare";
             environmentFile = config.sops.secrets.cloudflare-api.path;
         };
+        certs."nebulaservices.org" = {
+            dnsProvider = "cloudflare";
+            environmentFile = config.sops.secrets.cloudflare-api.path;
+        };
     };
 }

@@ -5,10 +5,14 @@
         containers = {
             incognito = {
                 image = "motortruck1221/incognito:latest";
-                ports = ["8080:8000"];
+                ports = ["6000:8000"];
                 cmd = [
                     "standalone"
                 ];
+            };
+            nebula = {
+                image = "motortruck1221/nebula:latest";
+                ports = ["6001:8080"];
             };
             epoxy = {
                 image = "motortruck1221/wisp-server-rust:latest";
