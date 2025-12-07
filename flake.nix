@@ -8,15 +8,12 @@
     nixpkgs = {
         url = "github:nixos/nixpkgs/nixos-25.11";
     };
-    agenix = { 
-        url = "github:ryantm/agenix";
-    };
     sops-nix = {
         url = "github:Mic92/sops-nix";
     };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, agenix, sops-nix, ... }@inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, sops-nix, ... }@inputs: let
     system = "x86_64-linux";
     pkgs-unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
 	in {
@@ -48,13 +45,12 @@
                 "vps-1" = nixpkgs.lib.nixosSystem {
                     inherit system;
                     specialArgs = {
-                        inherit inputs agenix pkgs-unstable;
+                        inherit inputs pkgs-unstable;
                         hostname = "vps-1";
                     };
                     modules = [
                         ./base.nix
                         ./systems/vps-1
-                        agenix.nixosModules.default
                         sops-nix.nixosModules.default
                     ];
                 };
