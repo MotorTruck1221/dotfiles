@@ -34,6 +34,20 @@
     },
     "nixpkgs_2": {
       "locked": {
+        "lastModified": 1768875095,
+        "narHash": "sha256-dYP3DjiL7oIiiq3H65tGIXXIT1Waiadmv93JS0sS+8A=",
+        "owner": "NixOS",
+        "repo": "nixpkgs",
+        "rev": "ed142ab1b3a092c4d149245d0c4126a5d7ea00b0",
+        "type": "github"
+      },
+      "original": {
+        "id": "nixpkgs",
+        "type": "indirect"
+      }
+    },
+    "nixpkgs_3": {
+      "locked": {
         "lastModified": 1768569498,
         "narHash": "sha256-bB6Nt99Cj8Nu5nIUq0GLmpiErIT5KFshMQJGMZwgqUo=",
         "owner": "NixOS",
@@ -48,16 +62,37 @@
         "type": "github"
       }
     },
+    "private-domains": {
+      "inputs": {
+        "nixpkgs": "nixpkgs_2"
+      },
+      "locked": {
+        "dir": "domains",
+        "lastModified": 1768973580,
+        "narHash": "sha256-3FGQRne7hOzgO/gNF6lJ4EbVjRo0RwyCIi0tO/UqBbU=",
+        "ref": "refs/heads/main",
+        "rev": "fd3ca70425f4601990873a5fcf3022c5d3148b59",
+        "revCount": 4,
+        "type": "git",
+        "url": "ssh://git@github.com/motortruck1221/private-flakes"
+      },
+      "original": {
+        "dir": "domains",
+        "type": "git",
+        "url": "ssh://git@github.com/motortruck1221/private-flakes"
+      }
+    },
     "root": {
       "inputs": {
         "nixpkgs": "nixpkgs",
         "nixpkgs-unstable": "nixpkgs-unstable",
+        "private-domains": "private-domains",
         "sops-nix": "sops-nix"
       }
     },
     "sops-nix": {
       "inputs": {
-        "nixpkgs": "nixpkgs_2"
+        "nixpkgs": "nixpkgs_3"
       },
       "locked": {
         "lastModified": 1768863606,
