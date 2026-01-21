@@ -1,6 +1,8 @@
 { config, pkgs, lib, inputs, ... }:
+let
+    nebulaDomains = if builtins.pathExists /etc/domains/nebula.nix then import /etc/domains/nebula.nix else [];
+in
 {
-    imports = [] ++ lib.optional (builtins.pathExists /etc/domains/domains.nix) /etc/domains/domains.nix;
     security.acme = {
         acceptTerms = true;
         defaults = {
@@ -15,7 +17,7 @@
             "nebulaservices.org" = {
                 dnsProvider = "cloudflare";
                 environmentFile = config.sops.secrets.cloudflare-api.path;
-                extraDomainNames = [ "nebulaproxy.io" "rubynetwork.co" ];
+                extraDomainNames = [ "nebulaproxy.io" "rubynetwork.co" ] ++ nebulaDomains;
             };
         };
     };
