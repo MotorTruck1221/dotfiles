@@ -1,6 +1,6 @@
 { config, pkgs, lib, inputs, ... }:
 let
-    nebulaDomains = if builtins.pathExists /etc/domains/nebula.nix then import /etc/domains/nebula.nix else [];
+    nebulaDomains = inputs.private-domains.nebulaDomains;
 in
 {
     security.acme = {
