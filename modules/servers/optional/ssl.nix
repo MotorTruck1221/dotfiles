@@ -1,5 +1,6 @@
-{ config, pkgs, ... }:
+{ config, pkgs, lib, inputs, ... }:
 {
+    imports = [] ++ lib.optional (builtins.pathExists /etc/domains/domains.nix) /etc/domains/domains.nix;
     security.acme = {
         acceptTerms = true;
         defaults = {
