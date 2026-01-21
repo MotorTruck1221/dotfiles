@@ -13,3 +13,4 @@ config/*
 !config/hypr/
 !config/waybar/
 secrets/keys.txt
+private-flakes/
