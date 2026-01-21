@@ -11,9 +11,9 @@
     sops-nix = {
         url = "github:Mic92/sops-nix";
     };
-    private-domains = {
-        url = "path:./private-flakes/domains";
-    };
+    #private-domains = {
+    #    url = "./private-flakes/domains";
+    #};
   };
 
   outputs = { self, nixpkgs, nixpkgs-unstable, sops-nix, ... }@inputs: let
