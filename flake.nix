@@ -12,7 +12,7 @@
         url = "github:Mic92/sops-nix";
     };
     private-domains = {
-        url = "git+ssh://git@github.com:motortruck1221/private-flakes?dir=domains";
+        url = "path:./private-flakes/domains";
     };
   };
 
