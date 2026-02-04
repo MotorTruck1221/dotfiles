@@ -3,22 +3,13 @@
   imports = [
   	./hardware.nix
     ../../modules/servers
-    ../../modules/servers/optional/oci-containers.nix
-    ../../modules/servers/optional/haproxy.nix
-    ../../modules/servers/optional/ssl.nix
+    #../../modules/servers/optional/oci-containers.nix
   ];
 
   sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
   sops.age.keyFile = "/home/motortruck1221/.hidden/key.txt";
   sops.age.generateKey = false;
   sops.secrets = {
-      haproxy = {
-          format = "binary";
-          sopsFile = ../../secrets/haproxy.cfg;
-          mode = "0440";
-          #owner = "haproxy";
-          #group = "haproxy";
-      };
       cloudflare-api = {
           format = "dotenv";
           sopsFile = ../../secrets/cloudflare.env;
@@ -41,22 +32,14 @@
             address = "104.36.84.1";
             interface = "enp3s0";
         };
-        nftables = {
+        nftables.enable = true;
+        firewall = {
             enable = true;
-            extraInputRules = ''
-                type filter hook input priority 0; policy drop;
-                iif "lo" accept
-                ct state established,related accept
-                
-                ip protocol icmp icmp type echo-request drop
-
-                tcp dport 22 ct state new,established accept
-                tcp dport { 80, 443 } ct state new,established accept
-
-                ip saddr 149.56.128.250 tcp dport { 5234, 5235 } ct state new,established accept
-            ''
+            allowedTCPPorts = [ 80 443 22 ];
+            allowedUDPPorts = [];
+            # Disables the ability to ping the server
+            allowPing = false;
         };
-        firewall.enable = false;
     }; 
 
     system.stateVersion = "24.11";
