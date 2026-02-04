@@ -41,22 +41,17 @@
             address = "104.36.84.1";
             interface = "enp3s0";
         };
-        nftables = {
+        nftables.enable = true;
+        firewall = {
             enable = true;
+            allowedTCPPorts = [ 80 443 22 ];
+            allowedUDPPorts = [];
             extraInputRules = ''
-                type filter hook input priority 0; policy drop;
-                iif "lo" accept
-                ct state established,related accept
-                
-                ip protocol icmp icmp type echo-request drop
-
-                tcp dport 22 ct state new,established accept
-                tcp dport { 80, 443 } ct state new,established accept
-
-                ip saddr 149.56.128.250 tcp dport { 5234, 5235 } ct state new,established accept
-            ''
+                ip saddr 149.56.128.250 tcp dport { 5234, 5235 } ct state new accept
+              '';
+            # Disables the ability to ping the server
+            allowPing = false;
         };
-        firewall.enable = false;
     }; 
 
     system.stateVersion = "24.11";
