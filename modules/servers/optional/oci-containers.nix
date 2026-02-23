@@ -14,8 +14,8 @@
                 image = "motortruck1221/nebula:latest";
                 ports = ["6001:8080"];
             };
-            epoxy = {
-                image = "motortruck1221/wisp-server-rust:latest";
+            wisp-python = {
+                image = "motortruck1221/wisp-server-python:1.0.0";
                 ports = ["4000:4000"];
             };
         };
