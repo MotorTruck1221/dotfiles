@@ -13,9 +13,13 @@
             nebula = {
                 image = "motortruck1221/nebula:latest";
                 ports = ["6001:8080"];
+                volumes = [
+                    "${config.sops.secrets.nebula.path}:/app/config.toml"
+                    "/var/run/postgresql:/var/run/postgresql:rw"
+                ];
             };
             wisp-python = {
-                image = "motortruck1221/wisp-server-python:1.0.0";
+                image = "motortruck1221/wisp-server-python:1.0.1";
                 ports = ["4000:4000"];
             };
         };

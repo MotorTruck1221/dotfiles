@@ -19,6 +19,10 @@
           #owner = "haproxy";
           #group = "haproxy";
       };
+      nebula = {
+          format = "binary";
+          sopsFile = ../../secrets/nebula.toml;
+      };
       cloudflare-api = {
           format = "dotenv";
           sopsFile = ../../secrets/cloudflare.env;
