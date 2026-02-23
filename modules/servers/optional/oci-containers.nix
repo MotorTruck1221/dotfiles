@@ -15,7 +15,7 @@
                 ports = ["6001:8080"];
                 volumes = [
                     "${config.sops.secrets.nebula.path}:/app/config.toml"
-                    "/var/run/postgresql:/var/run/postgresql:rw"
+                    "/var/run/postgresql:/var/run/postgresql/.s.PGSQL.5432:rw"
                 ];
             };
             wisp-python = {
