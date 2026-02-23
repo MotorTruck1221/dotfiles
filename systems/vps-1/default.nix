@@ -6,6 +6,7 @@
     ../../modules/servers/optional/oci-containers.nix
     ../../modules/servers/optional/haproxy.nix
     ../../modules/servers/optional/ssl.nix
+    ../../modules/servers/optional/postgres.nix
   ];
 
   sops.age.sshKeyPaths = [ "/home/motortruck1221/.ssh/id_ed25519" ];
