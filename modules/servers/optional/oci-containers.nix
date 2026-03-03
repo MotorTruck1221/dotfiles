@@ -17,6 +17,10 @@
                     "${config.sops.secrets.nebula.path}:/app/config.toml"
                     "/var/run/postgresql:/var/run/postgresql:rw"
                 ];
+                cmd = [
+                    "bstart",
+                    "--color"
+                ]
             };
             wisp-python = {
                 image = "motortruck1221/wisp-server-python:1.0.1";
