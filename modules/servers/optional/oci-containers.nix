@@ -11,7 +11,7 @@
                 ];
             };
             nebula = {
-                image = "motortruck1221/nebula:9.1.2";
+                image = "motortruck1221/nebula:9.1.3";
                 ports = ["6001:8080"];
                 volumes = [
                     "${config.sops.secrets.nebula.path}:/app/config.toml"
