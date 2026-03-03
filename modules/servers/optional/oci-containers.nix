@@ -11,11 +11,11 @@
                 ];
             };
             nebula = {
-                image = "motortruck1221/nebula:9.1.1";
+                image = "motortruck1221/nebula:9.1.2";
                 ports = ["6001:8080"];
                 volumes = [
                     "${config.sops.secrets.nebula.path}:/app/config.toml"
-                    "/var/run/postgresql:/var/run/postgresql/.s.PGSQL.5432:rw"
+                    "/var/run/postgresql:/var/run/postgresql:rw"
                 ];
             };
             wisp-python = {
