@@ -16,10 +16,7 @@
   };
   programs.xfconf.enable = true;
   programs.appimage.binfmt = true; 
-  programs.adb = {
-      enable = true;
-  };
-  services.seatd.enable = true;
+services.seatd.enable = true;
   virtualisation.docker.enable = true;
   security.pam.services.kwallet = {
         name = "kwallet";
@@ -37,5 +34,5 @@
         postgresql.lib
     ];
   }; 
-  environment.systemPackages = with pkgs; [ distrobox cloc ];
+  environment.systemPackages = with pkgs; [ distrobox cloc android-tools ];
 }
