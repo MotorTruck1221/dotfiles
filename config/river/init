@@ -60,7 +60,7 @@ dbus-update-activation-environment --systemd WAYLAND_DISPLAY XDG_CURRENT_DESKTOP
 systemctl --user restart xdg-desktop-portal
 
 # Auto start software
-riverctl spawn 'swww-daemon --format xrgb'
+riverctl spawn 'awww-daemon --format xrgb'
 riverctl spawn 'eww daemon --force-wayland'
 riverctl spawn 'waybar'
 riverctl spawn 'dunst -startup_notification'
