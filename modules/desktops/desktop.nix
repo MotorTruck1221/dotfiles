@@ -10,7 +10,7 @@
     };
     programs.thunar = {
       enable = true;
-      plugins = with pkgs.xfce; [
+      plugins = with pkgs; [
         thunar-volman
       ];
     };
@@ -28,7 +28,7 @@
     };
     environment.systemPackages = with pkgs; [
         river-classic
-        swww
+        awww
         eww
         wideriver
         bemenu
