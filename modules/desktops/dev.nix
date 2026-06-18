@@ -17,7 +17,7 @@
         zlib.dev
         deno
         nodejs
-        nodePackages.pnpm
+        pnpm
         zig
         gnumake
         ruby.devEnv
