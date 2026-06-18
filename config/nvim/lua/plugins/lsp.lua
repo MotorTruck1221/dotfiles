@@ -58,7 +58,7 @@ return {
                         lsp[server_name].setup({
                             on_attach = on_attach,
                             root_dir = lsp.util.root_pattern("package-lock.json", "pnpm-lock.yaml", "yarn.lock"),
-                            single_file_support = false
+                            single_file_support = false,
                         })
                     elseif server_name == 'denols' then
                       lsp[server_name].setup({

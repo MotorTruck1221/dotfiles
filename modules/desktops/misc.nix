@@ -37,5 +37,5 @@
         postgresql.lib
     ];
   }; 
-  environment.systemPackages = with pkgs; [ distrobox ];
+  environment.systemPackages = with pkgs; [ distrobox cloc ];
 }
