@@ -18,7 +18,7 @@
         deno
         nodejs
         pnpm
-        zig
+        zigpkgs.master
         gnumake
         ruby.devEnv
         android-studio

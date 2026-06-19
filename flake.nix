@@ -14,11 +14,21 @@
     private-domains = {
         url = "git+ssh://git@github.com:/motortruck1221/private-flakes?dir=domains";
     };
+    zig-unstable = {
+        url = "github:mitchellh/zig-overlay";
+    };
   };
 
-  outputs = { self, nixpkgs, nixpkgs-unstable, sops-nix, ... }@inputs: let
+  outputs = { self, nixpkgs, nixpkgs-unstable, zig-unstable, sops-nix, ... }@inputs: let
     system = "x86_64-linux";
-    pkgs-unstable = import nixpkgs-unstable {inherit system; config.allowUnfree = true;};
+    zig-nightly = import zig-unstable;
+    pkgs-unstable = import nixpkgs-unstable {
+        inherit system;
+        overlays = [
+            zig-unstable.overlays.default
+        ];
+        config.allowUnfree = true;
+    }; 
 	in {
       	    nixosConfigurations = {
 	            "voltex" = nixpkgs.lib.nixosSystem {
