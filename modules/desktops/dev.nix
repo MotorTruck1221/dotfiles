@@ -21,7 +21,6 @@
         zigpkgs.master
         gnumake
         ruby.devEnv
-        android-studio
         watchman
         bundix
         zig
